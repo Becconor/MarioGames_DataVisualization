@@ -1,0 +1,37 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#headerBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 85px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 2px grey;
+}
+
+#navbar {
+    display: flex;
+    margin-left: 150px;
+    gap: 100px;
+}
+
+#chooseSeason {
+    margin-right: 150px;
+    padding: 10px 30px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 2px 2px 2px rgb(158, 158, 158);
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px grey;
+}
