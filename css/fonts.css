@@ -1,4 +1,9 @@
 @font-face {
     font-family: "catamaran";
-    src: url(../catamaran/Catamaran-Bold.ttf);
+    src: url(../catamaran/Catamaran-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "inter";
+    src: url(../Inter/Inter-VariableFont_opsz\,wght.ttf);
 }
