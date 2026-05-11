@@ -1,3 +1,7 @@
+let sports = [];
+let worlds = [];
+let newSkills = [];
+let completeParticipantsSet = [];
 const skillNames = ["strength", "speed", "balance", "precision", "strategy"];
 const skillsPictures = [
   "../images/skills_pics/megaMushroom.webp",
@@ -6,7 +10,6 @@ const skillsPictures = [
   "../images/skills_pics/fireFlower.png",
   "../images/skills_pics/flyingMushroom.png",
 ];
-let newSkills = [];
 
 for (let i = 0; i < skills.length; i++) {
   newSkills.push({
@@ -24,7 +27,6 @@ const locationsPictures = [
   "../images/worlds_pics/skyWorldPic.png",
   "../images/worlds_pics/underWaterWorldPic.png",
 ];
-let worlds = [];
 for (let i = 0; i < locationsNames.length; i++) {
   worlds.push({
     id: locations[i].id,
@@ -47,12 +49,13 @@ const disciplinesPictures = [
   "../images/disciplines_pics/speedSkating/speedSkating1.png",
   "../images/disciplines_pics/snowboardCross/snowboardPic1.png",
 ];
-let sports = [];
+
 for (let i = 0; i < disciplineNames.length; i++) {
   sports.push({
     id: disciplines[i].id,
     name: disciplineNames[i],
     img: disciplinesPictures[i],
+    skillFactors: disciplines[i].skillFactors,
   });
 }
 
@@ -239,7 +242,6 @@ const addToParticipants = [
   },
 ];
 
-let completeParticipantsSet = [];
 for (let i = 0; i < addToParticipants.length; i++) {
   completeParticipantsSet.push({
     id: participants[i].id,
