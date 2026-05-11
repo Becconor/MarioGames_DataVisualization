@@ -74,12 +74,12 @@ const addToParticipants = [
     img: "../images/players/babyLuigi.png",
   },
   {
-    name: "",
+    name: "Baby Luma",
     img: "../images/players/babyLuma.webp",
   },
   {
-    name: "",
-    img: "../images/",
+    name: "Baby Mario",
+    img: "../images/players/babyMario.png",
   },
   {
     name: "",
