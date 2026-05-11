@@ -83,7 +83,7 @@ const addToParticipants = [
   },
   {
     name: "",
-    img: "../images/",
+    img: "../images/players/babyPeach.png",
   },
   {
     name: "",
