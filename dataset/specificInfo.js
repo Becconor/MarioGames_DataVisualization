@@ -58,10 +58,6 @@ for (let i = 0; i < disciplineNames.length; i++) {
 
 const addToParticipants = [
   {
-    name: "Mario",
-    img: "../images/players/mario.webp",
-  },
-  {
     name: "Amy",
     img: "../images/players/amy.webp",
   },
