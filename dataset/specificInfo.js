@@ -62,10 +62,6 @@ const addToParticipants = [
     img: "../images/players/amy.webp",
   },
   {
-    name: "Baby Peach",
-    img: "../images/players/Baby_Peach_Sluggers.webp",
-  },
-  {
     name: "Baby Daisy",
     img: "../images/players/babyDaisy.png",
   },
@@ -86,60 +82,168 @@ const addToParticipants = [
     img: "../images/players/babyPeach.png",
   },
   {
-    name: "",
-    img: "../images/",
+    name: "Baby Rosalina",
+    img: "../images/players/babyRosalina.png",
   },
   {
-    name: "",
-    img: "../images/",
+    name: "Birdo",
+    img: "../images/players/birdo.png",
   },
   {
-    name: "",
-    img: "../images/",
+    name: "Blaze",
+    img: "../images/players/blazeTheCat.webp",
   },
   {
-    name: "",
-    img: "../images/",
+    name: "BoomBoom",
+    img: "../images/players/boomBoom.webp",
   },
   {
-    name: "",
-    img: "../images/",
+    name: "Boomerang Bro",
+    img: "../images/players/boomerangBro.webp",
   },
   {
-    name: "",
-    img: "../images/",
+    name: "Bowser Jr",
+    img: "../images/players/bowser-jr.png",
   },
   {
-    name: "",
-    img: "../images/",
+    name: "Bowser",
+    img: "../images/players/bowser.webp",
   },
   {
-    name: "",
-    img: "../images/",
+    name: "Cream",
+    img: "../images/players/cream.webp",
   },
   {
-    name: "",
-    img: "../images/",
+    name: "Daisy",
+    img: "../images/players/daisy.png",
   },
   {
-    name: "",
-    img: "../images/",
+    name: "Diddy",
+    img: "../images/players/diddy.png",
+  },
+  {
+    name: "Donkey Kong",
+    img: "../images/players/donkeyKong.png",
+  },
+  {
+    name: "Dry Bones",
+    img: "../images/players/dryBones.webp",
+  },
+  {
+    name: "Eggman",
+    img: "../images/players/eggman.webp",
+  },
+  {
+    name: "Espio",
+    img: "../images/players/espio.png",
+  },
+  {
+    name: "Fire Bro",
+    img: "../images/players/fireBro.webp",
+  },
+  {
+    name: "Hammer Bro",
+    img: "../images/players/hammerBro.webp",
+  },
+  {
+    name: "Iggy Koopa",
+    img: "../images/players/iggyKoopa.png",
+  },
+  {
+    name: "Knuckles",
+    img: "../images/players/knuckle.webp",
+  },
+  {
+    name: "Koopa",
+    img: "../images/players/koopa.webp",
+  },
+  {
+    name: "Lakitu",
+    img: "../images/players/lakitu.png",
+  },
+  {
+    name: "Larry Koopa",
+    img: "../images/players/larryKoopa.png",
+  },
+  {
+    name: "Ludwig Von Koopa",
+    img: "../images/players/ludwigVonKoopa.webp",
+  },
+  {
+    name: "Luigi",
+    img: "../images/players/luigi.jpg",
+  },
+  {
+    name: "Mario",
+    img: "../images/players/mario.webp",
+  },
+  {
+    name: "Metal Sonic",
+    img: "../images/players/metalSonic.webp",
+  },
+  {
+    name: "Morton Koopa",
+    img: "../images/players/mortonKoopa.webp",
+  },
+  {
+    name: "Princess Peach",
+    img: "../images/players/princessPeach.png",
+  },
+  {
+    name: "Rosalina",
+    img: "../images/players/rosalina.png",
+  },
+  {
+    name: "Roy Koopa",
+    img: "../images/players/royKoopa.png",
+  },
+  {
+    name: "Shadow",
+    img: "../images/players/shadow.webp",
+  },
+  {
+    name: "ShyGuy",
+    img: "../images/players/shyGuy.png",
+  },
+  {
+    name: "Silver",
+    img: "../images/players/silver.webp",
+  },
+  {
+    name: "Sonic",
+    img: "../images/players/sonic.png",
+  },
+  {
+    name: "Tails",
+    img: "../images/players/SRCTails.webp",
+  },
+  {
+    name: "Toad",
+    img: "../images/players/toad.jpg",
+  },
+  {
+    name: "Toadette",
+    img: "../images/players/toadette.webp",
+  },
+  {
+    name: "Waluigi",
+    img: "../images/players/waluigi.png",
+  },
+  {
+    name: "Wario",
+    img: "../images/players/wario.png",
+  },
+  {
+    name: "Yoshi",
+    img: "../images/players/yoshi.png",
   },
 ];
 
+let completeParticipantsSet = [];
 for (let i = 0; i < addToParticipants.length; i++) {
-  Object.assign(addToParticipants[i], participants[i]);
+  completeParticipantsSet.push({
+    id: participants[i].id,
+    name: addToParticipants[i].name,
+    img: addToParticipants[i].img,
+  });
 }
-
-/* const lines = ["incomeTeachers", "incomeNurses", "incomeProgrammers"];
-let lineIncomeDataset = [];
-for (let line of lines) {
-  const oneLineData = { description: line, points: [] };
-  for (let yearData of datasetIncome) {
-    oneLineData.points.push({ year: yearData.year, income: yearData[line] });
-  }
-  lineIncomeDataset.push(oneLineData);
-} */
-
-  let completeParticipantsSet = [];
-  for(let p of)
