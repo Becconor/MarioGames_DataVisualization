@@ -333,7 +333,7 @@ function participantsList(id, listOfParticipants) {
                   src="${list[i].img}"
                   alt=""
                 />
-                <div class="choosen_player_namebox"></div>
+                <div class="choosen_player_namebox">${list[i].name}</div>
               </div>
               <div class="choosen_player_rightside">
                 <div class="choosen_player_info">
@@ -344,6 +344,10 @@ function participantsList(id, listOfParticipants) {
                 <div class="choosen_player_svg"></div>
               </div>
             `;
+            let nameBox = popup.querySelector(".choosen_player_namebox");
+            let infoBox = popup.querySelector(".choosen_player_info");
+            nameBox.style.backgroundColor = list[i].color;
+            infoBox.style.backgroundColor = list[i].color;
             playerCard.append(popup);
             playerPopup = true;
           } else if (playerPopup == true) {
