@@ -252,6 +252,11 @@ function disciplinesPage(sport) {
     participantsList("sport_page_rankings", addToParticipants);
   }
 }
+function disciplinesPage(location) {
+    header("disciplines");
+
+    locationsPage(location);
+};
 
 function participantsPage() {
   header("participant");
