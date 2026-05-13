@@ -73,10 +73,6 @@ const addToParticipants = [
     img: "../images/players/babyLuigi.png",
   },
   {
-    name: "Baby Luma",
-    img: "../images/players/babyLuma.webp",
-  },
-  {
     name: "Baby Mario",
     img: "../images/players/babyMario.png",
   },
@@ -242,10 +238,10 @@ const addToParticipants = [
   },
 ];
 
-for (let i = 0; i < addToParticipants.length; i++) {
+/* for (let i = 0; i < addToParticipants.length; i++) {
   completeParticipantsSet.push({
     id: participants[i].id,
     name: addToParticipants[i].name,
     img: addToParticipants[i].img,
   });
-}
+} */
