@@ -244,7 +244,7 @@ const addToParticipants = [
 
 for (let i = 0; i < addToParticipants.length; i++) {
   completeParticipantsSet.push({
-    id: participants[i].id,
+    // id: participants[i].id,
     name: addToParticipants[i].name,
     img: addToParticipants[i].img,
   });
