@@ -1,0 +1,179 @@
+#greenBox {
+    width: 100%;
+    height: 900px;
+    background-color: #1BA000;
+
+    margin-top: 300px;
+    display: flex;
+    align-items: flex-start;
+    padding: 5vh 10vw;
+    box-sizing: border-box;
+}
+
+
+#participantHeading {
+    color: #FFF;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#participantsIntro {
+    color: #fff;
+    width: 350px;
+    flex: 0 0 auto;
+}
+
+#secondPlace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#podium {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    align-items: flex-end;
+    margin-top: 70px;
+}
+
+#podiumMario {
+    width: 113px;
+    height: 175px;
+    aspect-ratio: 113/175;
+}
+
+#firstPlace,
+#thirdPlace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#podiumBowser {
+    width: 139px;
+    height: 139px;
+}
+
+#podiumDaisy {
+    width: 88px;
+    height: 165px;
+    aspect-ratio: 8/15;
+}
+
+.podiumBox {
+    color: #1BA000;
+    background-color: #FFF;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.podiumBox>p {
+    margin-top: 20px;
+    font-weight: bolder;
+}
+
+#firstPodium {
+    width: 184px;
+    height: 159px;
+    border-radius: 5px 5px 0 0;
+    border-top: 2px solid #1BA000;
+    border-right: 2px solid #1BA000;
+    border-left: 2px solid #1BA000;
+
+
+}
+
+#secondPodium {
+    width: 183px;
+    height: 113px;
+    border-radius: 5px 0 0 0;
+}
+
+#thirdPodium {
+    width: 183px;
+    height: 82px;
+    border-radius: 0 5px 0 0;
+}
+
+#playerTunnel {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -100px;
+    overflow: hidden;
+}
+
+.tunnelImg {
+    width: 259px;
+    height: 361px;
+}
+
+#tunnelLeft {
+    transform: rotate(90deg)
+}
+
+#tunnelRight {
+    transform: rotate(270deg) scale(-1, 1)
+}
+
+.seeMoreBut {
+    width: 232px;
+    height: 50px;
+    border-radius: 10px;
+    background: #F00;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-family: "catamaran";
+    font-size: 16px;
+}
+
+#redBox {
+    width: 100%;
+    height: 900px;
+    background-color: #F00;
+    display: flex;
+    align-items: flex-start;
+    padding: 5vh 10vw;
+    box-sizing: border-box;
+}
+
+#locationsAllBoxes {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.locationBox {
+    width: 400px;
+    height: 345px;
+    border-radius: 20px;
+    border: 1px solid #D9D9D9;
+    background: #FFF;
+    box-shadow: 0 10px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.locationBox:last-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.locationPicDiv {
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 353.351px;
+    height: 232.468px;
+}
+
+.locationPicDiv>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/landingpage.css">
   <title>The Mario Games</title>
 </head>
 
@@ -29,7 +30,7 @@
               <img src="../images/skills_pics/boomerangFlower.png" alt="">
             </div>
           </div>
- 
+
           <button>See More</button>
         </div>
 
@@ -87,9 +88,86 @@
       </div>
     </div>
 
-    <div id="participants"></div>
+    <div id="participants">
+      <div id="greenBox">
+        <div id="participantsIntro">
+          <h2 id="participantHeading">Participants</h2>
+          <p>Each season, 30 players compete to become the season champion. By taking part in
+            events and collecting points
+            throughout the season, they battle for the top spot on the leaderboard. <br><br>Each player is also
+            supported
+            by coaches and trainers who help them improve and develop over time.</p>
+        </div>
 
-    <div id="locations"></div>
+        <div id="podium">
+          <div id="secondPlace">
+            <img id="podiumBowser" src="../images/players/bowser.webp" alt="">
+            <!--Ska såklart vara andra spelare sen från array, beroende på vem som vinner-->
+            <div class="podiumBox" id="secondPodium">
+              <p>2</p>
+            </div>
+          </div>
+          <div id="firstPlace">
+            <img id="podiumMario" src="../images/players/mario.webp" alt="">
+            <div class="podiumBox" id="firstPodium">
+              <p>1</p>
+            </div>
+          </div>
+
+          <div id="thirdPlace">
+            <img id="podiumDaisy" src="../images/players/daisy.png" alt="">
+            <div class="podiumBox" id="thirdPodium">
+              <p>3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="playerTunnel">
+        <img class="tunnelImg" id="tunnelLeft" src="../images/pipeValid.png" alt="">
+        <img class="tunnelImg" id="tunnelRight" src="../images/pipeValid.png" alt="">
+      </div>
+      <button class="seeMoreBut">See More</button>
+    </div>
+
+    <div id="locations">
+      <h2>Locations</h2>
+      <p>Each game day takes place at one location. During the season, there are three game days per week, and all five
+        disciplines are played at the same location on that day before the competition moves to a new one.</p>
+    </div>
+    <div id="redBox">
+      <div id="locationsAllBoxes">
+        <div class="locationBox">
+          <div class="locationPicDiv">
+            <img src="../images/worlds_pics/skyWorldPic.png" alt="">
+          </div>
+          <h3>Sky world</h3>
+        </div>
+        <div class="locationBox">
+          <div class="locationPicDiv">
+            <img src="../images/worlds_pics/desertWorldPic.png" alt="">
+          </div>
+          <h3>Desert world</h3>
+        </div>
+        <div class="locationBox">
+          <div class="locationPicDiv">
+            <img src="../images/worlds_pics/mountainWorldPic.png" alt="">
+          </div>
+          <h3>Mountain world</h3>
+        </div>
+        <div class="locationBox">
+          <div class="locationPicDiv">
+            <img src="../images/worlds_pics/underwaterWorldPic.png" alt="">
+          </div>
+          <h3>Underwater world</h3>
+        </div>
+        <div class="locationBox">
+          <div class="locationPicDiv">
+            <img src="../images/worlds_pics/plainWorldPic.png" alt="">
+          </div>
+
+          <h3>Plain world</h3>
+        </div>
+      </div>
   </main>
 
   <script src="../d3/d3.v7.min.js"></script>
