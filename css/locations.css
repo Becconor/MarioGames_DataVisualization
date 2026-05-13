@@ -1,0 +1,94 @@
+#L_world {
+    padding: 0 10vw 0 10vw;
+    height: 50vh;
+
+
+}
+
+#L_worldText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 5vh 0 5vh 0;
+}
+
+.L_worldSky {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../images/worlds_pics/skyWorldPic.png);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#L_worldName {
+    text-align: center;
+}
+
+#L_worlsDescription {
+    text-shadow: 1px 1px 1px #bdbcbc;
+}
+
+#L_infoChoice {
+    margin: 0;
+    padding: 0 10vw 0 10vw;
+    height: 15vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #FF535B;
+    color: #fff;
+}
+
+.L_arrows {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#L_pickedLocationInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 10vw 10vw 10vw;
+}
+
+#L_pickedInfoText {
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 0 5vh 0;
+}
+
+.L_ranking {
+    box-sizing: border-box;
+    height: 75px;
+    padding: 25px;
+    box-shadow: 2px 2px 2px #bdbcbc;
+    border: 0.5px solid #bdbcbc;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.L_rankingFirstText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.L_rankPic {
+    height: 65px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

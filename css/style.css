@@ -173,12 +173,12 @@ header {
   box-sizing: border-box;
 }
 
-.disciplinesBoxes > div {
+.disciplinesBoxes>div {
   display: flex;
   gap: 12px;
 }
 
-.disciplinesBoxes > div > img {
+.disciplinesBoxes>div>img {
   width: 275px;
   height: 140px;
   object-fit: cover;

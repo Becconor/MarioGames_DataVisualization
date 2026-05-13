@@ -134,8 +134,10 @@ function homePage() {
     // `;
 };
 
-function disciplinesPage() {
+function disciplinesPage(location) {
     header("disciplines");
+
+    locationsPage(location);
 };
 
 function participantsPage() {
