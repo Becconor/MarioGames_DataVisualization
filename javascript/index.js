@@ -252,11 +252,6 @@ function disciplinesPage(sport) {
     participantsList("sport_page_rankings", addToParticipants);
   }
 }
-function disciplinesPage(location) {
-    header("disciplines");
-
-    locationsPage(location);
-};
 
 function participantsPage() {
   header("participant");
@@ -299,7 +294,9 @@ function participantsList(id, listOfParticipants) {
   let thirdPlayer = document.getElementById("third_player_pic");
   let button = document.getElementById("participants_list_button");
   let playersBox = document.getElementById("players");
+  let popup = document.createElement("div");
   let playersAreVisible = false;
+  let playerPopup = false;
 
   firstPlayer.style.backgroundImage = `url("${list[0].img}")`;
   secondPlayer.style.backgroundImage = `url("${list[1].img}")`;
@@ -325,8 +322,37 @@ function participantsList(id, listOfParticipants) {
         playerPic.style.backgroundImage = `url("${list[i].img}")`;
 
         playersBox.append(playerCard);
-        playersAreVisible = true;
+
+        playerCard.addEventListener("click", () => {
+          if (playerPopup == false) {
+            popup.classList.add("choosen_player_page");
+            popup.innerHTML = `
+              <div class="choosen_player_leftside">
+                <img
+                  class="choosen_player_pic"
+                  src="${list[i].img}"
+                  alt=""
+                />
+                <div class="choosen_player_namebox"></div>
+              </div>
+              <div class="choosen_player_rightside">
+                <div class="choosen_player_info">
+                  <img src="../images/arrows/arrowLeft.png" alt="" />
+                  <p class="choosen_player_info_text">skills</p>
+                  <img src="../images/arrows/arrowRight.png" alt="" />
+                </div>
+                <div class="choosen_player_svg"></div>
+              </div>
+            `;
+            playerCard.append(popup);
+            playerPopup = true;
+          } else if (playerPopup == true) {
+            popup.remove();
+            playerPopup = false;
+          }
+        });
       }
+      playersAreVisible = true;
     } else if (playersAreVisible) {
       button.textContent = "See all";
       button.style.marginTop = "";
@@ -417,5 +443,4 @@ function radarChart() {
     .style("border", "1px solid black"); // skapat svg som placeras i body och får höjd och bredd
 }
 
-/* disciplinesPage("speedSkating");
- */
+disciplinesPage("speedSkating");
