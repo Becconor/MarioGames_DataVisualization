@@ -115,7 +115,11 @@ function disciplinesPage(sport) {
     <div id="sport_page_box">
         <div id="sport_page_backgroundPicture">
           <div id="sport_page_whiteBackground">
-            <div class="back_track">p</div>
+            <div class="back_track">
+                <p>Home/</p>
+                <p>Disciplines/</p>
+                <p id="sport_page_choosen_sport"></p>
+            </div>
             <div id="sport_page_title"></div>
             <div id="sport_page_text"></div>
           </div>
@@ -144,6 +148,7 @@ function disciplinesPage(sport) {
   let title = document.getElementById("sport_page_title");
   let text = document.getElementById("sport_page_text");
   let picturesCarusel = document.getElementById("sport_page_carusel_track");
+  let choosensport = document.getElementById("sport_page_choosen_sport");
 
   if (sport == "snowboard") {
     //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
@@ -407,4 +412,5 @@ function radarChart() {
     .style("border", "1px solid black"); // skapat svg som placeras i body och får höjd och bredd
 }
 
-disciplinesPage("figureSkating");
+/* disciplinesPage("speedSkating");
+ */

@@ -49,6 +49,11 @@ body {
 .back_track {
   height: 10vh;
   width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 50px;
 }
 
 #sport_page_carusel_wrapper {

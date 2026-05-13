@@ -237,3 +237,60 @@
   font-size: 16px;
   font-weight: 800;
 }
+
+.choosen_player_page {
+  width: 675px;
+  height: 390px;
+
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid rgb(236, 234, 234);
+
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  display: flex;
+}
+
+.choosen_player_leftside {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.choosen_player_pic {
+  width: 150px;
+  height: 250px;
+}
+
+.choosen_player_namebox {
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  /* färg ska bytas */
+  background-color: aqua;
+}
+
+.choosen_player_rightside {
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.choosen_player_info {
+  width: 325px;
+  height: 30px;
+  background-color: aqua;
+  border-radius: 10px;
+}
+
+.choosen_player_svg {
+  height: 270px;
+  width: 315px;
+  border: 1px solid black;
+}
