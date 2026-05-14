@@ -333,7 +333,11 @@ function participantsList(id, listOfParticipants) {
                   src="${list[i].img}"
                   alt=""
                 />
-                <div class="choosen_player_namebox">${list[i].name}</div>
+                <div class="choosen_player_namebox">
+                    <img src="../images/arrows/arrowLeft.png" alt="" />
+                    <p class="choosen_player_info_text">${list[i].name}</p>
+                    <img src="../images/arrows/arrowRight.png" alt="" />
+                </div>
               </div>
               <div class="choosen_player_rightside">
                 <div class="choosen_player_info">
@@ -348,7 +352,7 @@ function participantsList(id, listOfParticipants) {
             let infoBox = popup.querySelector(".choosen_player_info");
             nameBox.style.backgroundColor = list[i].color;
             infoBox.style.backgroundColor = list[i].color;
-            playerCard.append(popup);
+            document.body.append(popup);
             playerPopup = true;
           } else if (playerPopup == true) {
             popup.remove();
@@ -362,6 +366,19 @@ function participantsList(id, listOfParticipants) {
       button.style.marginTop = "";
       playersBox.innerHTML = ``;
       playersAreVisible = false;
+    }
+  });
+
+  playersBox.addEventListener("click", (event) => {
+    let clickedPlayerCard = event.target.closest(".player_card");
+
+    if (clickedPlayerCard) {
+      return;
+    }
+
+    if (playerPopup == true) {
+      popup.remove();
+      playerPopup = false;
     }
   });
 }

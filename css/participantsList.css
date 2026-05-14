@@ -192,8 +192,6 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-
-  position: relative;
 }
 
 .players_circle {
@@ -250,9 +248,15 @@
   box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
 
   display: flex;
-  position: absolute;
-  z-index: 10;
-  top: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: min(90vw, 700px);
+  max-height: 85vh;
+
+  z-index: 999;
 }
 
 .choosen_player_leftside {
