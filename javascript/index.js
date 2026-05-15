@@ -334,9 +334,9 @@ function participantsList(id, listOfParticipants) {
                   alt=""
                 />
                 <div class="choosen_player_namebox">
-                    <img src="../images/arrows/arrowLeft.png" alt="" />
+                    <img class="choosen_player_left_arrow" class="choosen_player_arrow" src="../images/arrows/arrowLeft.png" alt="" />
                     <p class="choosen_player_info_text">${list[i].name}</p>
-                    <img src="../images/arrows/arrowRight.png" alt="" />
+                    <img class="choosen_player_right_arrow" class="choosen_player_arrow" src="../images/arrows/arrowRight.png" alt="" />
                 </div>
               </div>
               <div class="choosen_player_rightside">
@@ -348,12 +348,39 @@ function participantsList(id, listOfParticipants) {
                 <div class="choosen_player_svg"></div>
               </div>
             `;
+            let playerName = popup.querySelector(".choosen_player_info_text");
+            let playerPic = popup.querySelector(".choosen_player_pic");
             let nameBox = popup.querySelector(".choosen_player_namebox");
             let infoBox = popup.querySelector(".choosen_player_info");
+            let leftArrow = popup.querySelector(".choosen_player_left_arrow");
+            let rightArrow = popup.querySelector(".choosen_player_right_arrow");
+            let currentPlayer = i;
             nameBox.style.backgroundColor = list[i].color;
             infoBox.style.backgroundColor = list[i].color;
             document.body.append(popup);
             playerPopup = true;
+            leftArrow.addEventListener("click", () => {
+              currentPlayer--;
+
+              if (currentPlayer < 0) {
+                currentPlayer = list.length - 1;
+              }
+              nameBox.style.backgroundColor = list[currentPlayer].color;
+              infoBox.style.backgroundColor = list[currentPlayer].color;
+              playerName.textContent = list[currentPlayer].name;
+              playerPic.src = list[currentPlayer].img;
+            });
+            rightArrow.addEventListener("click", () => {
+              currentPlayer++;
+
+              if (currentPlayer > list.length - 1) {
+                currentPlayer = list.length - 1 - (list.length - 1);
+              }
+              nameBox.style.backgroundColor = list[currentPlayer].color;
+              infoBox.style.backgroundColor = list[currentPlayer].color;
+              playerName.textContent = list[currentPlayer].name;
+              playerPic.src = list[currentPlayer].img;
+            });
           } else if (playerPopup == true) {
             popup.remove();
             playerPopup = false;
@@ -464,4 +491,4 @@ function radarChart() {
     .style("border", "1px solid black"); // skapat svg som placeras i body och får höjd och bredd
 }
 
-disciplinesPage("speedSkating");
+disciplinesPage("figureSkating");
