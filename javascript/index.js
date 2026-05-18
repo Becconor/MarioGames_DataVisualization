@@ -255,6 +255,41 @@ function disciplinesPage(sport) {
 
 function participantsPage() {
   header("participant");
+  mainDOM.innerHTML = `
+  <div id="participants_page_backgroundimage">
+        <div class="back_track">
+          <p>Home/</p>
+          <p>Participants</p>
+        </div>
+        <div id="participants_page_title">Participants Ranking</div>
+      </div>
+      <div id="participants_page_participants"></div>
+      <div id="participants_page_box">
+        <div id="participants_page_informationbox">
+          <p id="participants_page_information_title">
+            Player Performance by Sport
+          </p>
+          <p id="participants_page_information_text">
+            Select a sport to see how each player performs within it. The chart
+            compares the number of times a player has participated with their
+            average score, making it easy to identify active players, consistent
+            performers, and standout results in the selected sport.
+          </p>
+        </div>
+        <div id="participants_page_buttons">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="participants_page_svg"></div>
+      </div>
+  `;
+
+  let participants = document.getElementById("participants_page_participants");
+  participantsList("participants_page_participants", addToParticipants);
+  scatterPlot();
 }
 
 function locationsPage() {
@@ -481,6 +516,8 @@ function picturesForCarusel(sport) {
   }
 }
 
+//alla diagram
+
 function radarChart() {
   let parent = document.getElementById("sport_page_skillBox");
   let svg = d3
@@ -491,4 +528,15 @@ function radarChart() {
     .style("border", "1px solid black"); // skapat svg som placeras i body och får höjd och bredd
 }
 
-disciplinesPage("snowboard");
+function scatterPlot() {
+  let parent = document.getElementById("participants_page_svg");
+  let svg = d3
+    .select(parent)
+    .append("svg")
+    .attr("width", "500")
+    .attr("height", "500")
+    .style("border", "1px solid black"); // skapat svg som placeras i body och får höjd och bredd
+}
+
+/* disciplinesPage("snowboard"); */
+participantsPage();
