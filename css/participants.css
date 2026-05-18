@@ -21,6 +21,38 @@
   align-items: center;
   background-color: #f7a7c8;
   padding-top: 120px;
+  position: relative;
+}
+
+#participants_page_participants::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: repeating-linear-gradient(
+    to right,
+    #f7a7c8 0px,
+    #f7a7c8 56px,
+    transparent 56px,
+    transparent 68px
+  );
+}
+#participants_page_participants::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: repeating-linear-gradient(
+    to right,
+    #f7a7c8 0px,
+    #f7a7c8 56px,
+    transparent 56px,
+    transparent 68px
+  );
 }
 
 #participants_page_box {
@@ -64,7 +96,7 @@
   width: 80%;
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 
 .participants_button_box {
