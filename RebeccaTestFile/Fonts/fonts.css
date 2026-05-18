@@ -1,0 +1,15 @@
+/* Fonts */
+@font-face {
+    font-family: "catamaran";
+    src: url(../Fonts/Catamaran/Catamaran-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "inter";
+    src: url(../Fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: "mario";
+    src: url(marioFont/Super\ Mario\ Bros..ttf);
+}

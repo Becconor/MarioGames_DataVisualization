@@ -1,0 +1,140 @@
+#participants_page_backgroundimage {
+    background-image: url(../images/backgrounds/participantsPageBackground.png);
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+}
+
+#participants_page_title {
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 40px;
+}
+
+#participants_page_participants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7a7c8;
+    padding-top: 120px;
+    position: relative;
+}
+
+#participants_page_participants::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background: repeating-linear-gradient(to right,
+            #f7a7c8 0px,
+            #f7a7c8 56px,
+            transparent 56px,
+            transparent 68px);
+}
+
+#participants_page_participants::after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background: repeating-linear-gradient(to right,
+            #f7a7c8 0px,
+            #f7a7c8 56px,
+            transparent 56px,
+            transparent 68px);
+}
+
+#participants_page_box {
+    background-image: url(../images/backgrounds/whiteGreyBackground.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#participants_page_informationbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+#participants_page_information_title {
+    color: #000;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 0.64px;
+    width: 100%;
+}
+
+#participants_page_information_text {
+    color: #000;
+
+    font-family: "inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0.48px;
+}
+
+#participants_page_buttons {
+    width: 80%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 80px;
+}
+
+.participants_button_box {
+    height: 100px;
+    width: 200px;
+    background-color: #a27a32;
+    border-radius: 10px;
+    border: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.participants_circle_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+.participants_circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.participants_button_text {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.participants_button_text img {
+    height: 100%;
+    width: 80%;
+    background-position: contain;
+}
+
+#participants_page_svg {
+    margin-bottom: 100px;
+}
