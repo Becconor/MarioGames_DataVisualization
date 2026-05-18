@@ -1,5 +1,5 @@
 let sports = [];
-let worlds = [];
+// let worlds = [];
 let newSkills = [];
 let completeParticipantsSet = [];
 const skillNames = ["strength", "speed", "balance", "precision", "strategy"];
@@ -19,21 +19,21 @@ for (let i = 0; i < skills.length; i++) {
   });
 }
 
-const locationsNames = ["desert", "mountain", "plain", "sky", "underwater"];
-const locationsPictures = [
-  "../images/worlds_pics/desertWorldPic.png",
-  "../images/worlds_pics/mountainWorldPic.png",
-  "../images/worlds_pics/plainWorldPic.png",
-  "../images/worlds_pics/skyWorldPic.png",
-  "../images/worlds_pics/underWaterWorldPic.png",
-];
-for (let i = 0; i < locationsNames.length; i++) {
-  worlds.push({
-    id: locations[i].id,
-    name: locationsNames[i],
-    img: locationsPictures[i],
-  });
-}
+// const locationsNames = ["desert", "mountain", "plain", "sky", "underwater"];
+// const locationsPictures = [
+//   "../images/worlds_pics/desertWorldPic.png",
+//   "../images/worlds_pics/mountainWorldPic.png",
+//   "../images/worlds_pics/plainWorldPic.png",
+//   "../images/worlds_pics/skyWorldPic.png",
+//   "../images/worlds_pics/underWaterWorldPic.png",
+// ];
+// for (let i = 0; i < locationsNames.length; i++) {
+//   worlds.push({
+//     id: locations[i].id,
+//     name: locationsNames[i],
+//     img: locationsPictures[i],
+//   });
+// }
 
 const disciplineNames = [
   "bobsleigh",
