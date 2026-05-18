@@ -1,0 +1,192 @@
+/* Locations */
+#L_world {
+    padding: 0 10vw 0 10vw;
+    height: 500px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#L_worldChoice {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.L_worldArrows {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 auto;
+    cursor: pointer;
+    filter: brightness(0);
+}
+
+#L_worldText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 25px;
+    border-radius: 20px;
+    background-color: rgba(250, 250, 250, 0.75);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+#L_worldDescriptionRow {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+#L_worldName {
+    text-align: center;
+    margin-top: 0;
+}
+
+#L_worlsDescription {
+    text-shadow: 1px 1px 1px #bdbcbc;
+}
+
+#L_infoChoice {
+    margin: 0;
+    padding: 0 10vw 0 10vw;
+    height: 15vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #F7D25C;
+    color: #fff;
+    text-shadow: 1px 1px 1px #bdbcbc;
+
+}
+
+.L_arrows {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#L_pickedLocationInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 10vw 10vw 10vw;
+}
+
+#L_pickedInfoText {
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 0 5vh 0;
+}
+
+#rankingList {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.L_gameDays {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.L_monthList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#L_gameDaySVG {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px #bdbcbc;
+    border: 0.5px solid #bdbcbc;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.L_chartAxis {
+    stroke: #5f5f5f;
+    stroke-width: 2;
+}
+
+.L_chartGridLine {
+    stroke: #e3e3e3;
+    stroke-width: 1;
+}
+
+.L_lollipopLine {
+    stroke: #F7D25C;
+    stroke-width: 6;
+    stroke-linecap: round;
+}
+
+.L_lollipopCircle {
+    fill: #F7D25C;
+    stroke: #fff;
+    stroke-width: 3;
+}
+
+.L_lollipopValue,
+.L_chartXLabel,
+.L_chartYLabel,
+.L_chartAxisTitle {
+    fill: #333;
+    font-family: inherit;
+}
+
+.L_lollipopValue {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.L_chartXLabel,
+.L_chartYLabel {
+    font-size: 16px;
+}
+
+.L_chartAxisTitle {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.L_ranking {
+    box-sizing: border-box;
+    height: 75px;
+    padding: 25px;
+    box-shadow: 2px 2px 2px #bdbcbc;
+    border: 0.5px solid #bdbcbc;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.L_rankingFirstText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.L_rankPic {
+    height: 65px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
