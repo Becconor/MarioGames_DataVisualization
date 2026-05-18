@@ -56,75 +56,9 @@ function header(page) {
     if (page === "locations") {
         headerDOM.style.background =
             "repeating-linear-gradient(-45deg, #F8D97D 0px, #F8D97D 18px, #F7D25C 18px, #F7D25C 36px) ";
-        chooseSeasonId.style.backgroundColor = "#F8D97D";
-        seasonDropdownID.style.backgroundColor = "#F8D97D";
+        chooseSeasonId.style.backgroundColor = "#F7D25C";
+        seasonDropdownID.style.backgroundColor = "#F7D25C";
     }
-
-    homePageId.addEventListener("click", () => {
-        disciplinesPageId.style.textDecoration = "none";
-        participantsPageId.style.textDecoration = "none";
-        locationsPageId.style.textDecoration = "none";
-
-        homePageId.style.textDecoration = "underline";
-    });
-
-    disciplinesPageId.addEventListener("click", () => {
-        homePageId.style.textDecoration = "none";
-        participantsPageId.style.textDecoration = "none";
-        locationsPageId.style.textDecoration = "none";
-
-        disciplinesPageId.style.textDecoration = "underline";
-    });
-
-    participantsPageId.addEventListener("click", () => {
-        homePageId.style.textDecoration = "none";
-        disciplinesPageId.style.textDecoration = "none";
-        locationsPageId.style.textDecoration = "none";
-
-        participantsPageId.style.textDecoration = "underline";
-    });
-
-    locationsPageId.addEventListener("click", () => {
-        homePageId.style.textDecoration = "none";
-        disciplinesPageId.style.textDecoration = "none";
-        participantsPageId.style.textDecoration = "none";
-
-        locationsPageId.style.textDecoration = "underline";
-    });
-
-    chooseSeasonId.addEventListener("click", () => {
-        if (seasonDropdownID.style.display === "block") {
-            seasonDropdownID.style.display = "none";
-        } else {
-            seasonDropdownID.style.display = "block";
-        }
-    });
-
-    if (page === "disciplines") {
-        headerDOM.style.background = "repeating-linear-gradient(-45deg, #85DB93 0px, #85DB93 18px, #74D484 18px, #74D484 36px) ";
-        chooseSeasonId.style.backgroundColor = "#85DB93";
-        seasonDropdownID.style.backgroundColor = "#85DB93";
-
-    }
-
-    if (page === "participant") {
-        headerDOM.style.background = "repeating-linear-gradient(-45deg, #f7a7c8 0px, #f7a7c8 18px, #f5b7d1 18px, #f5b7d1 36px) ";
-        chooseSeasonId.style.backgroundColor = "#f7a7c8";
-        seasonDropdownID.style.backgroundColor = "#f7a7c8";
-
-    }
-
-    if (page === "locations") {
-        headerDOM.style.background = "repeating-linear-gradient(-45deg, #F8D97D 0px, #F8D97D 18px, #F7D25C 18px, #F7D25C 36px) ";
-        chooseSeasonId.style.backgroundColor = "#F8D97D";
-        seasonDropdownID.style.backgroundColor = "#F8D97D";
-
-    }
-
-
-
-
-
 
     homePageId.addEventListener("click", () => {
         disciplinesPageId.style.textDecoration = "none";
@@ -142,6 +76,8 @@ function header(page) {
         locationsPageId.style.textDecoration = "none";
 
         disciplinesPageId.style.textDecoration = "underline";
+
+        disciplinesPage("snowboard");
     });
 
     participantsPageId.addEventListener("click", () => {
@@ -150,6 +86,8 @@ function header(page) {
         locationsPageId.style.textDecoration = "none";
 
         participantsPageId.style.textDecoration = "underline";
+
+        participantsPage();
     });
 
     locationsPageId.addEventListener("click", () => {
@@ -158,6 +96,8 @@ function header(page) {
         participantsPageId.style.textDecoration = "none";
 
         locationsPageId.style.textDecoration = "underline";
+
+        locationsPage("Desert World");
     });
 
     chooseSeasonId.addEventListener("click", () => {
@@ -325,9 +265,9 @@ function participantsPage() {
     header("participant");
 }
 
-function locationsPage() {
-    header("locations");
-}
+// function locationsPage() {
+//     header("locations");
+// }
 
 function participantsList(id, listOfParticipants) {
     let parent = document.getElementById(id);

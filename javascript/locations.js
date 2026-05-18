@@ -38,6 +38,8 @@ let locationSections = [
 
 
 function locationsPage(location) {
+    header("locations");
+
     let world = locationInfo.find(p => p.title === location);
     let currentSection = locationSections[currentSectionIndex];
     let sectionContent = "";
@@ -184,5 +186,3 @@ function locationsPage(location) {
 function worldInfoPick() {
 
 }
-
-locationsPage("Desert World");

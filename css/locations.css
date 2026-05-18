@@ -33,8 +33,10 @@
     justify-content: space-between;
     align-items: center;
 
-    background-color: #FF535B;
+    background-color: #F7D25C;
     color: #fff;
+    text-shadow: 1px 1px 1px #bdbcbc;
+
 }
 
 .L_arrows {
