@@ -416,27 +416,27 @@ function picturesForCarusel(sport) {
       "../images/disciplines_pics/snowboardCross/snowboardCross1.png",
       "../images/disciplines_pics/snowboardCross/snowboardCross2.png",
       "../images/disciplines_pics/snowboardCross/snowboardCross3.png",
-      "../images/disciplines_pics/snowboardCross/snowboardCross1.png", //byt sedan till rätt bild
-      "../images/disciplines_pics/snowboardCross/snowboardCross1.png", //byt sedan till rätt bild
+      "../images/disciplines_pics/snowboardCross/snowboardCross4.png",
+      "../images/disciplines_pics/snowboardCross/snowboardCross5.png",
       "../images/disciplines_pics/snowboardCross/snowboardCross1.png",
       "../images/disciplines_pics/snowboardCross/snowboardCross2.png",
       "../images/disciplines_pics/snowboardCross/snowboardCross3.png",
-      "../images/disciplines_pics/snowboardCross/snowboardCross1.png", //byt sedan till rätt bild
-      "../images/disciplines_pics/snowboardCross/snowboardCross1.png", // byt sedan till rätt bild
+      "../images/disciplines_pics/snowboardCross/snowboardCross4.png",
+      "../images/disciplines_pics/snowboardCross/snowboardCross5.png",
     ];
   } else if (sport == "bobSleigh") {
     // lägg in rätt bilder
     return [
-      "../images/disciplines_pics/bobSleigh/snowboardCross1.png",
-      "../images/disciplines_pics/bobSleigh/snowboardCross2.png",
-      "../images/disciplines_pics/bobSleigh/snowboardCross3.png",
-      "../images/disciplines_pics/bobSleigh/snowboardCross1.png",
-      "../images/disciplines_pics/bobSleigh/snowboardCross1.png",
-      "../images/disciplines_pics/bobSleigh/snowboardCross1.png",
-      "../images/disciplines_pics/bobSleigh/snowboardCross2.png",
-      "../images/disciplines_pics/bobSleigh/snowboardCross3.png",
-      "../images/disciplines_pics/bobSleigh/snowboardCross1.png",
-      "../images/disciplines_pics/bobSleigh/snowboardCross1.png",
+      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
+      "../images/disciplines_pics/bobSleigh/bobSleigh2.png",
+      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
+      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
+      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
+      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
+      "../images/disciplines_pics/bobSleigh/bobSleigh2.png",
+      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
+      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
+      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
     ];
   } else if (sport == "figureSkating") {
     return [
@@ -491,4 +491,4 @@ function radarChart() {
     .style("border", "1px solid black"); // skapat svg som placeras i body och får höjd och bredd
 }
 
-disciplinesPage("figureSkating");
+disciplinesPage("snowboard");
