@@ -277,11 +277,86 @@ function participantsPage() {
           </p>
         </div>
         <div id="participants_page_buttons">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div class="participants_button_box">
+            <div class="participants_circle_box">
+              <div class="participants_circle"></div>
+              <div class="participants_circle"></div>
+            </div>
+            <div class="participants_button_text">
+              <img
+                src="../images/disciplines_pics/bobSleigh/bobSleighText3.png"
+                alt=""
+              />
+            </div>
+            <div class="participants_circle_box">
+              <div class="participants_circle"></div>
+              <div class="participants_circle"></div>
+            </div>
+          </div>
+          <div class="participants_button_box">
+            <div class="participants_circle_box">
+              <div class="participants_circle"></div>
+              <div class="participants_circle"></div>
+            </div>
+            <div class="participants_button_text">
+              <img
+                src="../images/disciplines_pics/figureSkating/figureSkatingText.png"
+                alt=""
+              />
+            </div>
+            <div class="participants_circle_box">
+              <div class="participants_circle"></div>
+              <div class="participants_circle"></div>
+            </div>
+          </div>
+          <div class="participants_button_box">
+            <div class="participants_circle_box">
+              <div class="participants_circle"></div>
+              <div class="participants_circle"></div>
+            </div>
+            <div class="participants_button_text">
+              <img
+                src="../images/disciplines_pics/skiJumping/skiJumpingText.png"
+                alt=""
+              />
+            </div>
+            <div class="participants_circle_box">
+              <div class="participants_circle"></div>
+              <div class="participants_circle"></div>
+            </div>
+          </div>
+          <div class="participants_button_box">
+            <div class="participants_circle_box">
+              <div class="participants_circle"></div>
+              <div class="participants_circle"></div>
+            </div>
+            <div class="participants_button_text">
+              <img
+                src="../images/disciplines_pics/snowboardCross/snowboardCrosstext.png"
+                alt=""
+              />
+            </div>
+            <div class="participants_circle_box">
+              <div class="participants_circle"></div>
+              <div class="participants_circle"></div>
+            </div>
+          </div>
+          <div class="participants_button_box">
+            <div class="participants_circle_box">
+              <div class="participants_circle"></div>
+              <div class="participants_circle"></div>
+            </div>
+            <div class="participants_button_text">
+              <img
+                src="../images/disciplines_pics/speedSkating/speedSkatingText.png"
+                alt=""
+              />
+            </div>
+            <div class="participants_circle_box">
+              <div class="participants_circle"></div>
+              <div class="participants_circle"></div>
+            </div>
+          </div>
         </div>
         <div id="participants_page_svg"></div>
       </div>
