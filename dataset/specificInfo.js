@@ -289,3 +289,5 @@ const addToParticipants = [
     img: addToParticipants[i].img,
   });
 } */
+
+console.log(sports);
