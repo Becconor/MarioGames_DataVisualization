@@ -1,7 +1,11 @@
-function radarChart() {
+function choosenSport(sport) {
+  let selectedSport = disciplineInfo.find((x) => x.title == sport);
+  return selectedSport;
+}
+function radarChart(sport) {
   let parent = document.getElementById("sport_page_skillBox");
   let selectedSport = choosenSport(sport);
-  let skills = selectedSport.skillFactors;
+  let skills = Object.entries(selectedSport.skillFactors);
 
   let width = 500;
   let height = 500;
@@ -37,6 +41,30 @@ function radarChart() {
       .attr("stroke", "grey")
       .attr("stroke-width", 1);
   }
+  //skapa axlarna
+  skills.forEach((d, i) => {
+    const angle = angleSlice * i - Math.PI / 2;
+
+    const x = Math.cos(angle) * radius;
+    const y = Math.sin(angle) * radius;
+
+    svg
+      .append("line")
+      .attr("x1", 0)
+      .attr("y1", 0)
+      .attr("x2", x)
+      .attr("y2", y)
+      .attr("stroke", "#999")
+      .attr("stroke-width", 1);
+  });
+
+  //lägg till text runt diagrammet
+  skills.forEach((d, i) => {
+    const angle = angleSlice * i - Math.PI / 2;
+
+    const x = Math.cos(angle) * radius;
+    const y = Math.sin(angle) * radius;
+  });
 }
 
 function scatterPlot() {
