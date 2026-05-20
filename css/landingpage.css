@@ -74,6 +74,12 @@
     font-size: 1.2rem;
 }
 
+#curvedLineWhite {
+    position: absolute;
+    top: 830px;
+    width: 2000px;
+}
+
 #greenLine {
     width: 1000px;
 }

@@ -145,10 +145,11 @@ function homePage() {
         <h2>10 seasons has passed of SWOL!</h2>
         <p>Here you can find everything you need to know.</p>
       </div>
+                  <img id="curvedLineWhite" src="images/curvedLineWhite.png" alt="">
 
 
     </div>
-    <img src="images/curvedLineWhite.png" alt="">
+
     <div id="disciplines">
 
       <div id="disciplinesIntro">
