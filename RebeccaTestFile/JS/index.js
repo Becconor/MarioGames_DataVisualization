@@ -314,6 +314,13 @@ function homePage() {
           <h3>Plain world</h3>
         </div>
       </div>`;
+
+
+  let seeMoreBtn = document.querySelector(".seeMoreBut");
+  seeMoreBtn.addEventListener("click", () => {
+    participantsPage();
+  });
+  renderTunnelPlayers();
 }
 
 homePage();

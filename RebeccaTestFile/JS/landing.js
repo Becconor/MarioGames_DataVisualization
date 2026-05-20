@@ -44,3 +44,8 @@ document.getElementById('arrowDivR').addEventListener('click', () => {
 
 renderTunnelPlayers();
 
+let seeMoreBtn = document.querySelector(".seeMoreBut");
+seeMoreBtn.addEventListener("click", () => {
+
+    participantsPage();
+});
