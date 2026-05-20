@@ -244,14 +244,15 @@ leftArrow.addEventListener("click", () => {
 
   radarChart("Bob Sleigh");
   participantsList("sport_page_rankings", participantsInfo);
-}
+
   if (sport == "figureSkating") {
-  //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
-  let sportPicturesArray = picturesForCarusel("figureSkating");
-  backgroundPic.style.backgroundImage =
-    "url('../images/disciplines_pics/figureSkating/figureSkatingPic.png')";
-  disciplinesPage(sportPageInfo[currentSportIndex].title);
-};
+    //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
+    let sportPicturesArray = picturesForCarusel("figureSkating");
+    backgroundPic.style.backgroundImage =
+      "url('../images/disciplines_pics/figureSkating/figureSkatingPic.png')";
+    disciplinesPage(sportPageInfo[currentSportIndex].title);
+  }
+});
 
 rightArrow.addEventListener("click", () => {
   currentSportIndex++;
@@ -260,7 +261,6 @@ rightArrow.addEventListener("click", () => {
     currentSportIndex = 0;
   }
 
-<<<<<<< Updated upstream
   radarChart("Figure Skating");
   participantsList("sport_page_rankings", participantsInfo);
 }
@@ -304,13 +304,11 @@ if (sport == "speedSkating") {
   radarChart("Speed Skating");
   participantsList("sport_page_rankings", participantsInfo);
 }
-=======
-    disciplinesPage(sportPageInfo[currentSportIndex].title);
+disciplinesPage(sportPageInfo[currentSportIndex].title);
   });
 
-  radarChart();
-  participantsList("sport_page_rankings", getSportRanking(currentSport.id));
->>>>>>> Stashed changes
+radarChart();
+participantsList("sport_page_rankings", getSportRanking(currentSport.id));
 }
 
 function picturesForCarusel(sport) {
