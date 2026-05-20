@@ -12,16 +12,14 @@ function radarChart(sport) {
   let height = 500;
   const margin = 60;
   const maxValue = 25; //ändra till största talet i skills
-  const minValue = 0;
   const levels = 5;
   const radius = Math.min(width, height) / 2 - margin;
   //räkna ut vinkel för mellan varje skills
   const angleSlice = (Math.PI * 2) / skills.length;
 
-  const radiusScale = d3
-    .scaleLinear()
-    .domain([minValue, maxValue])
-    .range([0, radius]);
+  const radiusScale = d3.scaleLinear().domain([0, levels]).range([0, radius]);
+
+  const skillScale = d3.scaleLinear().domain([0, maxValue]).range([0, levels]);
 
   let svg = d3
     .select(parent)
@@ -84,7 +82,7 @@ function radarChart(sport) {
   //skapa radarformen
   const radarLine = d3
     .lineRadial()
-    .radius((d) => radiusScale(d[1])) //d.value behövs ändra
+    .radius((d) => radiusScale(skillScale(d[1]))) //d.value behövs ändra
     .angle((d, i) => i * angleSlice)
     .curve(d3.curveLinearClosed);
 
@@ -101,8 +99,10 @@ function radarChart(sport) {
   skills.forEach((d, i) => {
     const angle = angleSlice * i - Math.PI / 2;
 
-    const x = Math.cos(angle) * radiusScale(d[1]); //d.value behövs ändras
-    const y = Math.sin(angle) * radiusScale(d[1]); //d.value behövs ändras
+    const scaledValue = skillScale(d[1]);
+
+    const x = Math.cos(angle) * radiusScale(scaledValue);
+    const y = Math.sin(angle) * radiusScale(scaledValue);
 
     middle
       .append("circle")
