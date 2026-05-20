@@ -327,3 +327,13 @@
 .choosen_player_arrow {
   height: 60%;
 }
+
+.choosen_player_right_arrow {
+  width: 30px;
+  height: 30px;
+}
+
+.choosen_player_left_arrow {
+  width: 30px;
+  height: 30px;
+}
