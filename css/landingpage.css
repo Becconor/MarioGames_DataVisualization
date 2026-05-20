@@ -1,0 +1,317 @@
+#titlePage {
+    width: 100%;
+    height: 850px;
+
+    background-image: url("../images/titlePageBG-Enhanced.png");
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* HERO BILD */
+
+#heroCharacters {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+
+    height: 600px;
+
+    z-index: 2;
+
+}
+
+/* TITEL */
+
+#titleText {
+    position: absolute;
+
+    top: 120px;
+    left: 380px;
+
+    z-index: 3;
+    text-shadow: 4px 4px 0 red;
+}
+
+#titleText h1 {
+    margin: 0;
+
+    font-size: 5rem;
+    line-height: 0.95;
+
+    color: white;
+    font-weight: 900;
+}
+
+/* FLYTTA NEDERSTA RADEN */
+
+#titleBottom {
+    margin-left: 140px !important;
+}
+
+/* INFO TEXT */
+
+#titleInfo {
+    position: absolute;
+
+    top: 420px;
+    right: 180px;
+
+    z-index: 3;
+
+    color: white;
+}
+
+#titleInfo h2 {
+    margin: 0 0 10px 0;
+    font-size: 2rem;
+}
+
+#titleInfo p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+#greenLine {
+    width: 1000px;
+}
+
+#greenBox {
+    width: 100%;
+    height: 600px;
+    background-color: #1BA000;
+
+    margin-top: 300px;
+    display: flex;
+    align-items: flex-start;
+    padding: 5vh 10vw;
+    box-sizing: border-box;
+}
+
+
+#participantHeading {
+    color: #FFF;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#participantsIntro {
+    color: #fff;
+    width: 350px;
+    flex: 0 0 auto;
+}
+
+#secondPlace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#podium {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    align-items: flex-end;
+    margin-top: 70px;
+}
+
+#podiumMario {
+    width: 113px;
+    height: 175px;
+    aspect-ratio: 113/175;
+}
+
+#firstPlace,
+#thirdPlace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#podiumBowser {
+    width: 139px;
+    height: 139px;
+}
+
+#podiumDaisy {
+    width: 88px;
+    height: 165px;
+    aspect-ratio: 8/15;
+}
+
+.podiumBox {
+    color: #1BA000;
+    background-color: #FFF;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.podiumBox>p {
+    margin-top: 20px;
+    font-weight: bolder;
+}
+
+#firstPodium {
+    width: 184px;
+    height: 159px;
+    border-radius: 5px 5px 0 0;
+    border-top: 2px solid #1BA000;
+    border-right: 2px solid #1BA000;
+    border-left: 2px solid #1BA000;
+
+
+}
+
+#secondPodium {
+    width: 183px;
+    height: 113px;
+    border-radius: 5px 0 0 0;
+}
+
+#thirdPodium {
+    width: 183px;
+    height: 82px;
+    border-radius: 0 5px 0 0;
+}
+
+#playerTunnel {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -100px;
+    overflow: hidden;
+    align-items: center;
+
+}
+
+#leftSideT,
+#rightSideT {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+}
+
+.tunnelImg {
+    width: 259px;
+    height: 361px;
+}
+
+#tunnelLeft {
+    transform: rotate(90deg);
+}
+
+#tunnelRight {
+    transform: rotate(270deg) scale(-1, 1);
+}
+
+.arrowDiv {
+    width: 75px;
+    height: 75px;
+    background-color: #E50B0B;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 45px;
+}
+
+#arrowDivL {
+    border-radius: 0 50% 50% 0;
+}
+
+#arrowDivR {
+    border-radius: 50% 0 0 50%;
+}
+
+
+.seeMoreBut {
+    width: 232px;
+    height: 50px;
+    border-radius: 10px;
+    background: #F00;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: #fff;
+    font-family: "catamaran";
+    font-size: 16px;
+    display: block;
+    margin: 20px auto 100px;
+}
+
+#redBox {
+    width: 100%;
+    height: 1500px;
+    background-color: #F00;
+    display: flex;
+    align-items: flex-start;
+    padding: 5vh 10vw;
+    box-sizing: border-box;
+}
+
+#locationsAllBoxes {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.locationBox {
+    width: 400px;
+    height: 345px;
+    border-radius: 20px;
+    border: 1px solid #D9D9D9;
+    background: #FFF;
+    box-shadow: 0 10px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.locationBox:last-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.locationPicDiv {
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 353.351px;
+    height: 232.468px;
+}
+
+.locationPicDiv>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+#playerCarousel {
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    width: 100%;
+    height: 361px;
+    position: relative;
+}
+
+#playersContainer {
+    display: flex;
+    gap: 10px;
+    width: 600px;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.playerImg {
+    height: 175px;
+}
+
+#locations {
+    margin-left: 150px;
+}
