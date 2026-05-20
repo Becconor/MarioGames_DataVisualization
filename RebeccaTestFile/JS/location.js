@@ -296,12 +296,14 @@ function locationsPage(location) {
         <div id="L_world">
             <div id="L_worldChoice">
                 <div id="L_worldText">
-                    <h1 id="L_worldName">${world.title}</h1 >
+                    <div id="L_worldTitleRow">
+                        <img class="L_worldArrows" id="L_worldArrowsLeft" src="images/arrows/arrowLeft.png" alt="">
+                        <h1 id="L_worldName">${world.title}</h1 >
+                        <img class="L_worldArrows" id="L_worldArrowsRight" src="images/arrows/arrowRight.png" alt="">
+                    </div>
 
                     <div id="L_worldDescriptionRow">
-                        <img class="L_worldArrows" id="L_worldArrowsLeft" src="images/arrows/arrowLeft.png" alt="">
                         <p id="L_worlsDescription">${world.text}</p>
-                        <img class="L_worldArrows" id="L_worldArrowsRight" src="images/arrows/arrowRight.png" alt="">
                     </div>
                 </div >
             </div>

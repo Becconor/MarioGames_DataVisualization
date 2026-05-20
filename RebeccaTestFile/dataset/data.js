@@ -44,6 +44,33 @@ let locationSections = [
 
 console.log("locationInfo", locationInfo);
 
+// Skills
+const skillsInfo = [
+  {
+    title: "strength",
+    img: "../images/skills_pics/megaMushroom.webp",
+  }, {
+    title: "speed",
+    img: "../images/skills_pics/boomerangFlower.png",
+  }, {
+    title: "balance",
+    img: "../images/skills_pics/superLeaf.webp",
+  }, {
+    title: "precision",
+    img: "../images/skills_pics/fireFlower.png",
+  }, {
+    title: "strategy",
+    img: "../images/skills_pics/flyingMushroom.png",
+  },
+];
+
+for (let i = 0; i < skillsInfo.length; i++) {
+  skillsInfo[i].id = skills[i].id;
+  skillsInfo[i].skillFactorKey = skills[i].name;
+}
+
+console.log("skillsInfo", skillsInfo);
+
 // Sports
 const disciplineInfo = [
   {
@@ -79,7 +106,20 @@ for (let i = 0; i < disciplineInfo.length; i++) {
   );
 
   if (matchingDiscipline) {
-    disciplineInfo[i].skillFactors = matchingDiscipline.skillFactors;
+    let skillFactors = {};
+
+    for (let skillFactorKey in matchingDiscipline.skillFactors) {
+      let matchingSkill = skillsInfo.find(
+        (skill) => skill.skillFactorKey === skillFactorKey,
+      );
+
+      if (matchingSkill) {
+        skillFactors[matchingSkill.title] =
+          matchingDiscipline.skillFactors[skillFactorKey];
+      }
+    }
+
+    disciplineInfo[i].skillFactors = skillFactors;
   }
 }
 
@@ -314,17 +354,6 @@ for (let i = 0; i < participantsInfo.length; i++) {
 }
 
 console.log("participantsInfo", participantsInfo);
-
-// Skills
-// let skills = [];
-// const skillNames = ["strength", "speed", "balance", "precision", "strategy"];
-// const skillsPictures = [
-//     "../images/skills_pics/megaMushroom.webp",
-//     "../images/skills_pics/boomerangFlower.png",
-//     "../images/skills_pics/superLeaf.webp",
-//     "../images/skills_pics/fireFlower.png",
-//     "../images/skills_pics/flyingMushroom.png",
-// ];
 
 // Seasons
 const seasonInfo = seasons.map((season) => {
