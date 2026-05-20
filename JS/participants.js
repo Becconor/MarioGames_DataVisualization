@@ -230,7 +230,13 @@ function participantsList(id, listOfParticipants) {
                   alt=""
                 />
                 <div class="choosen_player_namebox">
+<<<<<<< Updated upstream
                     <p class="choosen_player_info_text">${list[i].name}</p>
+=======
+                    <img class="choosen_player_left_arrow" class="choosen_player_arrow" src="images/arrows/arrowLeft.png" alt="" />
+                    <p class="choosen_player_info_text">${list[i].name}</p>
+                    <img class="choosen_player_right_arrow" class="choosen_player_arrow" src="images/arrows/arrowRight.png" alt="" />
+>>>>>>> Stashed changes
                 </div>
               </div>
               <div class="choosen_player_rightside">
@@ -253,6 +259,7 @@ function participantsList(id, listOfParticipants) {
             infoBox.style.backgroundColor = list[i].color;
             document.body.append(popup);
             playerPopup = true;
+
             leftArrow.addEventListener("click", () => {
               currentPlayer--;
 
@@ -264,6 +271,7 @@ function participantsList(id, listOfParticipants) {
               playerName.textContent = list[currentPlayer].name;
               playerPic.src = list[currentPlayer].img;
             });
+
             rightArrow.addEventListener("click", () => {
               currentPlayer++;
 
@@ -275,6 +283,8 @@ function participantsList(id, listOfParticipants) {
               playerName.textContent = list[currentPlayer].name;
               playerPic.src = list[currentPlayer].img;
             });
+
+
           } else if (playerPopup == true) {
             popup.remove();
             playerPopup = false;
