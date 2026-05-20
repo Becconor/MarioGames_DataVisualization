@@ -10,7 +10,7 @@ function radarChart(sport) {
   let width = 500;
   let height = 500;
   const margin = 60;
-  const maxValue = 5;
+  const maxValue = 5; //ändra till största talet i skills
   const minValue = 0;
   const levels = 5;
   const radius = Math.min(width, height) / 2 - margin;
