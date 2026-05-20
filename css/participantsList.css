@@ -317,13 +317,6 @@
   font-weight: 900;
   margin: auto;
 }
-
-.choosen_player_svg {
-  height: 270px;
-  width: 315px;
-  border: 1px solid black;
-}
-
 .choosen_player_arrow {
   height: 60%;
 }

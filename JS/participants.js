@@ -241,7 +241,7 @@ function participantsList(id, listOfParticipants) {
                   <p class="choosen_player_info_text">Skills</p>
                   <img class="rightArrow2" src="images/arrows/arrowRight.png" alt="" />
                 </div>
-                <div class="choosen_player_svg"></div>
+                <div id="choosen_player_svg"></div>
               </div>
             `;
             let playerName = popup.querySelector(".choosen_player_info_name");
@@ -253,6 +253,7 @@ function participantsList(id, listOfParticipants) {
             let leftArrow2 = popup.querySelector(".leftArrow2");
             let rightArrow2 = popup.querySelector(".rightArrow2");
             let choice = popup.querySelector(".choosen_player_info_text");
+            let svgBox = popup.querySelector("#choosen_player_svg");
             let currentPlayer = i;
             let choices = ["Skills", "Best Sport", "Ranking Per Season"];
             let currentChoice = 0;
@@ -260,6 +261,7 @@ function participantsList(id, listOfParticipants) {
             infoBox.style.backgroundColor = list[i].color;
             document.body.append(popup);
             playerPopup = true;
+            barChart();
 
             leftArrow.addEventListener("click", () => {
               currentPlayer--;
@@ -286,6 +288,7 @@ function participantsList(id, listOfParticipants) {
             });
 
             rightArrow2.addEventListener("click", () => {
+              svgBox.innerHTML = ``;
               currentChoice++;
               if (currentChoice > choices.length - 1) {
                 currentChoice = 0;
@@ -296,7 +299,7 @@ function participantsList(id, listOfParticipants) {
                 console.log("barChart");
                 barChart();
               }
-              if (choice.textContent == "Ranking Per season") {
+              if (choice.textContent == "Ranking Per Season") {
                 console.log("linechart");
                 lineChart();
               }
@@ -307,6 +310,7 @@ function participantsList(id, listOfParticipants) {
             });
 
             leftArrow2.addEventListener("click", () => {
+              svgBox.innerHTML = ``;
               currentChoice--;
               if (currentChoice < 0) {
                 currentChoice = choices.length - 1;

@@ -138,8 +138,34 @@ function scatterPlot() {
     .style("border", "1px solid black"); // skapat svg som placeras i body och får höjd och bredd
 }
 
-function barChart() {}
+function barChart() {
+  let parent = document.getElementById("choosen_player_svg");
 
-function lineChart() {}
+  
+  let svg = d3
+    .select(parent)
+    .append("svg")
+    .attr("width", "315")
+    .attr("height", "270")
+    .style("border", "1px solid black");
+}
 
-function sportRanking() {}
+function lineChart() {
+  let parent = document.getElementById("choosen_player_svg");
+  let svg = d3
+    .select(parent)
+    .append("svg")
+    .attr("width", "315")
+    .attr("height", "270")
+    .style("border", "1px solid black");
+}
+
+function sportRanking() {
+  let parent = document.getElementById("choosen_player_svg");
+  let svg = d3
+    .select(parent)
+    .append("svg")
+    .attr("width", "315")
+    .attr("height", "270")
+    .style("border", "1px solid black");
+}
