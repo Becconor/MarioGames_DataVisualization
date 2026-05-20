@@ -187,7 +187,7 @@ function picturesForCarusel(sport) {
   return getSportPageInfo(sport).pictures;
 }
 
-function picturesForCarusel(sport) {
+/* function picturesForCarusel(sport) {
   if (sport == "snowboard") {
     return [
       "../images/disciplines_pics/snowboardCross/snowboardCross1.png",
@@ -255,4 +255,4 @@ function picturesForCarusel(sport) {
       "../images/disciplines_pics/speedSkating/speedSkating5.png",
     ];
   }
-}
+} */
