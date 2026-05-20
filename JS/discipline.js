@@ -96,71 +96,12 @@ const sportPageInfo = [
   },
 ];
 
-function getSportPageInfo(sportTitle) {
-  return sportPageInfo.find((sport) => sport.title === sportTitle) ||
-    sportPageInfo[0];
-}
-
-function getSportRanking(disciplineId) {
-  let pointsByParticipant = {};
-
-  for (
-    let dayIndex = 0;
-    dayIndex < selectedSeason.competitionDays.length;
-    dayIndex++
-  ) {
-    let day = selectedSeason.competitionDays[dayIndex];
-
-    for (let eventIndex = 0; eventIndex < day.events.length; eventIndex++) {
-      let event = day.events[eventIndex];
-
-      if (event.disciplineId !== disciplineId) {
-        continue;
-      }
-
-      for (let scoreIndex = 0; scoreIndex < event.scores.length; scoreIndex++) {
-        let playerScore = event.scores[scoreIndex];
-
-        if (!pointsByParticipant[playerScore.participantId]) {
-          pointsByParticipant[playerScore.participantId] = 0;
-        }
-
-        pointsByParticipant[playerScore.participantId] += playerScore.score;
-      }
-    }
-  }
-
-  let ranking = [];
-
-  for (let participantId in pointsByParticipant) {
-    let participant = participantsInfo.find(
-      (player) => player.id === Number(participantId),
-    );
-
-    if (participant) {
-      ranking.push({
-        ...participant,
-        totalScore: pointsByParticipant[participantId],
-      });
-    }
-  }
-
-  ranking.sort((a, b) => {
-    if (b.totalScore !== a.totalScore) {
-      return b.totalScore - a.totalScore;
-    }
-
-    return a.name.localeCompare(b.name);
-  });
-
-  return ranking;
-}
-
 function disciplinesPage(sport) {
   currentSportTitle = sport || currentSportTitle;
   header("disciplines");
 
   let currentSport = getSportPageInfo(currentSportTitle);
+
   let currentSportIndex = sportPageInfo.findIndex(
     (sportInfo) => sportInfo.title === currentSport.title,
   );
@@ -207,107 +148,111 @@ function disciplinesPage(sport) {
   let leftArrow = document.getElementById("sport_page_sportArrowLeft");
   let rightArrow = document.getElementById("sport_page_sportArrowRight");
 
-  backgroundPic.style.backgroundImage =
-    `url("${currentSport.backgroundImage}")`;
+  backgroundPic.style.backgroundImage = `url("${currentSport.backgroundImage}")`;
   title.textContent = currentSport.title;
   text.textContent = currentSport.text;
 
-  // <<<<<<< Updated upstream
-  title.textContent = "Snowboard Cross";
-  text.textContent =
-    "Snowboard Cross is a fast-paced winter racing game where players race down snowy mountains and icy tracks using snowboards while avoiding obstacles, collecting coins, and competing against other characters. During each race, players encounter jumps, sharp turns, moving hazards, and enemies placed throughout the course. Different power-ups can be collected along the track to gain speed boosts, temporary invincibility, or special abilities.";
-
-  for (let pic of sportPicturesArray) {
+  for (let pic of currentSport.pictures) {
     let div = document.createElement("div");
     div.classList.add("sport_page_carusel_pictures");
     div.style.backgroundImage = `url("${pic}")`;
     picturesCarusel.append(div);
   }
 
-  radarChart("Snowboard Cross");
-  participantsList("sport_page_rankings", participantsInfo);
-  // =======
-  //   for (let pic of currentSport.pictures) {
-  //     let div = document.createElement("div");
-  //     div.classList.add("sport_page_carusel_pictures");
-  //     div.style.backgroundImage = `url("${pic}")`;
-  //     picturesCarusel.append(div);
-  // >>>>>>> Stashed changes
-}
-
-leftArrow.addEventListener("click", () => {
-  currentSportIndex--;
-
-  if (currentSportIndex < 0) {
-    currentSportIndex = sportPageInfo.length - 1;
-  }
-
-  radarChart("Bob Sleigh");
+  radarChart(currentSport.title);
   participantsList("sport_page_rankings", participantsInfo);
 
-  if (sport == "figureSkating") {
-    //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
-    let sportPicturesArray = picturesForCarusel("figureSkating");
-    backgroundPic.style.backgroundImage =
-      "url('../images/disciplines_pics/figureSkating/figureSkatingPic.png')";
+  leftArrow.addEventListener("click", () => {
+    currentSportIndex--;
+
+    if (currentSportIndex < 0) {
+      currentSportIndex = sportPageInfo.length - 1;
+    }
+
     disciplinesPage(sportPageInfo[currentSportIndex].title);
-  }
-});
+  });
 
-rightArrow.addEventListener("click", () => {
-  currentSportIndex++;
+  rightArrow.addEventListener("click", () => {
+    currentSportIndex++;
 
-  if (currentSportIndex >= sportPageInfo.length) {
-    currentSportIndex = 0;
-  }
+    if (currentSportIndex >= sportPageInfo.length) {
+      currentSportIndex = 0;
+    }
 
-  radarChart("Figure Skating");
-  participantsList("sport_page_rankings", participantsInfo);
+    disciplinesPage(sportPageInfo[currentSportIndex].title);
+  });
 }
-  if (sport == "skiJumping") {
-  //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
-  let sportPicturesArray = picturesForCarusel("skiJumping");
-  backgroundPic.style.backgroundImage =
-    "url('../images/disciplines_pics/skiJumping/skiJumpingPic1.png')";
-
-  title.textContent = "Ski Jumping";
-  text.textContent =
-    "Ski Jumping is a thrilling winter challenge where players speed down a snowy ramp before launching high into the air and trying to land as far as possible. During each jump, players must build up speed, time their takeoff, keep balance in the air, and control the landing to earn points. The course includes icy ramps, wind changes, timing challenges, and obstacles that affect the jump. Different power-ups can be collected to increase speed, improve stability, or give the player extra lift during the flight.";
-
-  for (let pic of sportPicturesArray) {
-    let div = document.createElement("div");
-    div.classList.add("sport_page_carusel_pictures");
-    div.style.backgroundImage = `url("${pic}")`;
-    picturesCarusel.append(div);
-  }
-
-  radarChart("Ski Jumping");
-  participantsList("sport_page_rankings", participantsInfo);
-}
-if (sport == "speedSkating") {
-  //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
-  let sportPicturesArray = picturesForCarusel("speedSkating");
-  backgroundPic.style.backgroundImage =
-    "url('../images/disciplines_pics/speedSkating/speedSkatingPic.png')";
-
-  title.textContent = "Speed Skating";
-  text.textContent =
-    "Speed Skating is a fast-paced winter racing game where players race across icy tracks using quick movements, sharp turns, and precise timing to stay ahead of their opponents. During each race, players must build speed, keep balance on slippery ice, avoid obstacles, and use the best racing line to gain an advantage. The track includes tight curves, speed zones, icy hazards, and challenging sections that test both control and reaction time. Different power-ups can be collected to gain speed boosts, improve handling, or temporarily protect the player from mistakes.";
-
-  for (let pic of sportPicturesArray) {
-    let div = document.createElement("div");
-    div.classList.add("sport_page_carusel_pictures");
-    div.style.backgroundImage = `url("${pic}")`;
-    picturesCarusel.append(div);
-  }
-
-  radarChart("Speed Skating");
-  participantsList("sport_page_rankings", participantsInfo);
-});
-
-
-
 
 function picturesForCarusel(sport) {
   return getSportPageInfo(sport).pictures;
+}
+
+function picturesForCarusel(sport) {
+  if (sport == "snowboard") {
+    return [
+      "../images/disciplines_pics/snowboardCross/snowboardCross1.png",
+      "../images/disciplines_pics/snowboardCross/snowboardCross2.png",
+      "../images/disciplines_pics/snowboardCross/snowboardCross3.png",
+      "../images/disciplines_pics/snowboardCross/snowboardCross4.png",
+      "../images/disciplines_pics/snowboardCross/snowboardCross5.png",
+      "../images/disciplines_pics/snowboardCross/snowboardCross1.png",
+      "../images/disciplines_pics/snowboardCross/snowboardCross2.png",
+      "../images/disciplines_pics/snowboardCross/snowboardCross3.png",
+      "../images/disciplines_pics/snowboardCross/snowboardCross4.png",
+      "../images/disciplines_pics/snowboardCross/snowboardCross5.png",
+    ];
+  } else if (sport == "bobSleigh") {
+    return [
+      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
+      "../images/disciplines_pics/bobSleigh/bobSleigh2.png",
+      "../images/disciplines_pics/bobSleigh/bobSleighPic3.png",
+      "../images/disciplines_pics/bobSleigh/bobSleighPic4.png",
+      "../images/disciplines_pics/bobSleigh/bobSleighPicture5.png",
+      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
+      "../images/disciplines_pics/bobSleigh/bobSleigh2.png",
+      "../images/disciplines_pics/bobSleigh/bobSleighPic3.png",
+      "../images/disciplines_pics/bobSleigh/bobSleighPic4.png",
+      "../images/disciplines_pics/bobSleigh/bobSleighPicture5.png",
+    ];
+  } else if (sport == "figureSkating") {
+    return [
+      "../images/disciplines_pics/figureSkating/figureSkating1.png",
+      "../images/disciplines_pics/figureSkating/figureSkating2.png",
+      "../images/disciplines_pics/figureSkating/figureSkating3.png",
+      "../images/disciplines_pics/figureSkating/figureSkating4.png",
+      "../images/disciplines_pics/figureSkating/figureSkating5.png",
+      "../images/disciplines_pics/figureSkating/figureSkating1.png",
+      "../images/disciplines_pics/figureSkating/figureSkating2.png",
+      "../images/disciplines_pics/figureSkating/figureSkating3.png",
+      "../images/disciplines_pics/figureSkating/figureSkating4.png",
+      "../images/disciplines_pics/figureSkating/figureSkating5.png",
+    ];
+  } else if (sport == "skiJumping") {
+    // lägg in rätt bilder
+    return [
+      "../images/disciplines_pics/skiJumping/snowboardCross1.png",
+      "../images/disciplines_pics/skiJumping/snowboardCross2.png",
+      "../images/disciplines_pics/skiJumping/snowboardCross3.png",
+      "../images/disciplines_pics/skiJumping/snowboardCross4.png",
+      "../images/disciplines_pics/skiJumping/snowboardCross1.png",
+      "../images/disciplines_pics/skiJumping/snowboardCross1.png",
+      "../images/disciplines_pics/skiJumping/snowboardCross2.png",
+      "../images/disciplines_pics/skiJumping/snowboardCross3.png",
+      "../images/disciplines_pics/skiJumping/snowboardCross1.png",
+      "../images/disciplines_pics/skiJumping/snowboardCross1.png",
+    ];
+  } else if (sport == "speedSkating") {
+    return [
+      "../images/disciplines_pics/speedSkating/speedSkating1.png",
+      "../images/disciplines_pics/speedSkating/speedSkating2.png",
+      "../images/disciplines_pics/speedSkating/speedSkating3.png",
+      "../images/disciplines_pics/speedSkating/speedSkating4.png",
+      "../images/disciplines_pics/speedSkating/speedSkating5.png",
+      "../images/disciplines_pics/speedSkating/speedSkating1.png",
+      "../images/disciplines_pics/speedSkating/speedSkating2.png",
+      "../images/disciplines_pics/speedSkating/speedSkating3.png",
+      "../images/disciplines_pics/speedSkating/speedSkating4.png",
+      "../images/disciplines_pics/speedSkating/speedSkating5.png",
+    ];
+  }
 }
