@@ -2,11 +2,7 @@ function participantsPage() {
   header("participant");
   mainDOM.innerHTML = `
   <div id="participants_page_backgroundimage">
-        <div class="back_track">
-          <p>Home/</p>
-          <p>Participants</p>
-        </div>
-        <div id="participants_page_title">Participants Ranking</div>
+        <h1 id="participants_page_title">Participants Ranking</h1>
       </div>
       <div id="participants_page_participants"></div>
       <div id="participants_page_box">
