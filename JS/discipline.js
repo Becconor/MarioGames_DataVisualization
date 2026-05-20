@@ -195,7 +195,7 @@ function picturesForCarusel(sport) {
 }
 
 /* function picturesForCarusel(sport) {
-  if (sport == "snowboard") {
+  if (sport == "Snowboard Cross") {
     return [
       "../images/disciplines_pics/snowboardCross/snowboardCross1.png",
       "../images/disciplines_pics/snowboardCross/snowboardCross2.png",
@@ -208,7 +208,7 @@ function picturesForCarusel(sport) {
       "../images/disciplines_pics/snowboardCross/snowboardCross4.png",
       "../images/disciplines_pics/snowboardCross/snowboardCross5.png",
     ];
-  } else if (sport == "bobSleigh") {
+  } else if (sport == "Bob Sleigh") {
     return [
       "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
       "../images/disciplines_pics/bobSleigh/bobSleigh2.png",
@@ -221,7 +221,7 @@ function picturesForCarusel(sport) {
       "../images/disciplines_pics/bobSleigh/bobSleighPic4.png",
       "../images/disciplines_pics/bobSleigh/bobSleighPicture5.png",
     ];
-  } else if (sport == "figureSkating") {
+  } else if (sport == "Figure Skating") {
     return [
       "../images/disciplines_pics/figureSkating/figureSkating1.png",
       "../images/disciplines_pics/figureSkating/figureSkating2.png",
@@ -234,7 +234,7 @@ function picturesForCarusel(sport) {
       "../images/disciplines_pics/figureSkating/figureSkating4.png",
       "../images/disciplines_pics/figureSkating/figureSkating5.png",
     ];
-  } else if (sport == "skiJumping") {
+  } else if (sport == "Ski Jumping") {
     // lägg in rätt bilder
     return [
       "../images/disciplines_pics/skiJumping/snowboardCross1.png",
@@ -248,7 +248,7 @@ function picturesForCarusel(sport) {
       "../images/disciplines_pics/skiJumping/snowboardCross1.png",
       "../images/disciplines_pics/skiJumping/snowboardCross1.png",
     ];
-  } else if (sport == "speedSkating") {
+  } else if (sport == "Speed Skating") {
     return [
       "../images/disciplines_pics/speedSkating/speedSkating1.png",
       "../images/disciplines_pics/speedSkating/speedSkating2.png",
@@ -262,4 +262,5 @@ function picturesForCarusel(sport) {
       "../images/disciplines_pics/speedSkating/speedSkating5.png",
     ];
   }
-} */
+}
+ */
