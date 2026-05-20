@@ -96,6 +96,13 @@ const sportPageInfo = [
   },
 ];
 
+function getSportPageInfo(sportTitle) {
+  return (
+    sportPageInfo.find((sport) => sport.title === sportTitle) ||
+    sportPageInfo[0]
+  );
+}
+
 function disciplinesPage(sport) {
   currentSportTitle = sport || currentSportTitle;
   header("disciplines");
