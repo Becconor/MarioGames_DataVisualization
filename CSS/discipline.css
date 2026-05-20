@@ -147,8 +147,11 @@ body {
 
 #sport_page_skillBox {
   margin-top: 400px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #sport_page_skillset {
@@ -159,6 +162,7 @@ body {
 #sport_page_skillset_text {
   color: #fff;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 40px;
 }
 
 #sport_page_rankingbox {
