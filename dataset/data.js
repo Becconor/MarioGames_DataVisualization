@@ -49,16 +49,20 @@ const skillsInfo = [
   {
     title: "strength",
     img: "images/skills_pics/megaMushroom.webp",
-  }, {
+  },
+  {
     title: "speed",
     img: "images/skills_pics/boomerangFlower.png",
-  }, {
+  },
+  {
     title: "balance",
     img: "images/skills_pics/superLeaf.webp",
-  }, {
+  },
+  {
     title: "precision",
     img: "images/skills_pics/fireFlower.png",
-  }, {
+  },
+  {
     title: "strategy",
     img: "images/skills_pics/flyingMushroom.png",
   },
@@ -264,7 +268,7 @@ const participantsInfo = [
   },
   {
     name: "Luigi",
-    img: "images/players/luigi.jpg",
+    img: "images/players/luigi.png",
     color: "#00AA00",
   },
   {
@@ -324,7 +328,7 @@ const participantsInfo = [
   },
   {
     name: "Toad",
-    img: "images/players/toad.jpg",
+    img: "images/players/toad.png",
     color: "#FF0000",
   },
   {
