@@ -2,14 +2,18 @@ function participantsPage() {
   header("participant");
   mainDOM.innerHTML = `
   <div id="participants_page_backgroundimage">
-        <h1 id="participants_page_title">Participants Ranking</h1>
+        <div class="back_track">
+          <p>Home/</p>
+          <p>Participants</p>
+        </div>
+        <div id="participants_page_title">Participants Ranking</div>
       </div>
       <div id="participants_page_participants"></div>
       <div id="participants_page_box">
         <div id="participants_page_informationbox">
-          <h2 id="participants_page_information_title">
+          <p id="participants_page_information_title">
             Player Performance by Sport
-          </h2>
+          </p>
           <p id="participants_page_information_text">
             Select a sport to see how each player performs within it. The chart
             compares the number of times a player has participated with their
@@ -25,7 +29,7 @@ function participantsPage() {
             </div>
             <div class="participants_button_text">
               <img
-                src="images/disciplines_pics/bobSleighText.png"
+                src="images/disciplines_pics/bobSleigh/bobSleighText3.png"
                 alt=""
               />
             </div>
@@ -41,7 +45,7 @@ function participantsPage() {
             </div>
             <div class="participants_button_text">
               <img
-                src="images/disciplines_pics/figureskatingText.png"
+                src="images/disciplines_pics/figureSkating/figureskatingText.png"
                 alt=""
               />
             </div>
@@ -57,7 +61,7 @@ function participantsPage() {
             </div>
             <div class="participants_button_text">
               <img
-                src="images/disciplines_pics/skiJumpingText.png"
+                src="images/disciplines_pics/skiJumping/skiJumpingText.png"
                 alt=""
               />
             </div>
@@ -73,7 +77,7 @@ function participantsPage() {
             </div>
             <div class="participants_button_text">
               <img
-                src="images/disciplines_pics/snowboardCrosstext.png"
+                src="images/disciplines_pics/snowboardCross/snowboardCrosstext.png"
                 alt=""
               />
             </div>
@@ -89,7 +93,7 @@ function participantsPage() {
             </div>
             <div class="participants_button_text">
               <img
-                src="images/disciplines_pics/speedSkatingText.png"
+                src="images/disciplines_pics/speedSkating/speedSkatingText.png"
                 alt=""
               />
             </div>
@@ -104,7 +108,7 @@ function participantsPage() {
   `;
 
   let participants = document.getElementById("participants_page_participants");
-  participantsList("participants_page_participants", addToParticipants);
+  participantsList("participants_page_participants", participantsInfo);
   scatterPlot();
 }
 

@@ -102,11 +102,11 @@ header {
     width: 20px;
     height: 20px;
     filter: brightness(0) invert(1);
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
 }
 
 #seasonArrow.open {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 }
 
 #seasonDropdown {
