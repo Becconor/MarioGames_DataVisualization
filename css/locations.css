@@ -188,15 +188,28 @@
 }
 
 .L_rankingFirstText {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 40px 70px 1fr;
     align-items: center;
-    gap: 50px;
+    column-gap: 25px;
+    min-width: 360px;
 }
 
 .L_rankPic {
     height: 65px;
+    max-width: 70px;
+    justify-self: center;
+    object-fit: contain;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.L_rankNumber {
+    text-align: center;
+}
+
+.L_rankNames {
+    margin: 0;
+    text-align: left;
 }
