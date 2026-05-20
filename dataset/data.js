@@ -48,19 +48,19 @@ console.log("locationInfo", locationInfo);
 const skillsInfo = [
   {
     title: "strength",
-    img: "../images/skills_pics/megaMushroom.webp",
+    img: "images/skills_pics/megaMushroom.webp",
   }, {
     title: "speed",
-    img: "../images/skills_pics/boomerangFlower.png",
+    img: "images/skills_pics/boomerangFlower.png",
   }, {
     title: "balance",
-    img: "../images/skills_pics/superLeaf.webp",
+    img: "images/skills_pics/superLeaf.webp",
   }, {
     title: "precision",
-    img: "../images/skills_pics/fireFlower.png",
+    img: "images/skills_pics/fireFlower.png",
   }, {
     title: "strategy",
-    img: "../images/skills_pics/flyingMushroom.png",
+    img: "images/skills_pics/flyingMushroom.png",
   },
 ];
 
