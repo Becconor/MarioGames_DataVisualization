@@ -303,13 +303,10 @@ if (sport == "speedSkating") {
 
   radarChart("Speed Skating");
   participantsList("sport_page_rankings", participantsInfo);
-}
-disciplinesPage(sportPageInfo[currentSportIndex].title);
-  });
+});
 
-radarChart();
-participantsList("sport_page_rankings", getSportRanking(currentSport.id));
-}
+
+
 
 function picturesForCarusel(sport) {
   return getSportPageInfo(sport).pictures;
