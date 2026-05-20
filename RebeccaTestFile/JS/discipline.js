@@ -43,7 +43,7 @@ function disciplinesPage(sport) {
     backgroundPic.style.backgroundImage =
       "url(../images/disciplines_pics/snowboardCross/snowboardPic1.png)";
 
-    title.textContent = "Snowboard cross";
+    title.textContent = "Snowboard Cross";
     text.textContent =
       "Snowboard Cross is a fast-paced winter racing game where players race down snowy mountains and icy tracks using snowboards while avoiding obstacles, collecting coins, and competing against other characters. During each race, players encounter jumps, sharp turns, moving hazards, and enemies placed throughout the course. Different power-ups can be collected along the track to gain speed boosts, temporary invincibility, or special abilities.";
 
@@ -54,7 +54,7 @@ function disciplinesPage(sport) {
       picturesCarusel.append(div);
     }
 
-    radarChart();
+    radarChart("Snowboard Cross");
     participantsList("sport_page_rankings", participantsInfo);
   }
 
@@ -75,7 +75,7 @@ function disciplinesPage(sport) {
       picturesCarusel.append(div);
     }
 
-    radarChart();
+    radarChart("Bob Sleigh");
     participantsList("sport_page_rankings", participantsInfo);
   }
   if (sport == "figureSkating") {
@@ -95,7 +95,7 @@ function disciplinesPage(sport) {
       picturesCarusel.append(div);
     }
 
-    radarChart();
+    radarChart("Figure Skating");
     participantsList("sport_page_rankings", participantsInfo);
   }
   if (sport == "skiJumping") {
@@ -104,7 +104,7 @@ function disciplinesPage(sport) {
     backgroundPic.style.backgroundImage =
       "url('../images/disciplines_pics/skiJumping/skiJumpingPic1.png')";
 
-    title.textContent = "Ski jumping";
+    title.textContent = "Ski Jumping";
     text.textContent =
       "Ski Jumping is a thrilling winter challenge where players speed down a snowy ramp before launching high into the air and trying to land as far as possible. During each jump, players must build up speed, time their takeoff, keep balance in the air, and control the landing to earn points. The course includes icy ramps, wind changes, timing challenges, and obstacles that affect the jump. Different power-ups can be collected to increase speed, improve stability, or give the player extra lift during the flight.";
 
@@ -115,7 +115,7 @@ function disciplinesPage(sport) {
       picturesCarusel.append(div);
     }
 
-    radarChart();
+    radarChart("Ski Jumping");
     participantsList("sport_page_rankings", participantsInfo);
   }
   if (sport == "speedSkating") {
@@ -124,7 +124,7 @@ function disciplinesPage(sport) {
     backgroundPic.style.backgroundImage =
       "url('../images/disciplines_pics/speedSkating/speedSkatingPic.png')";
 
-    title.textContent = "Speed skating";
+    title.textContent = "Speed Skating";
     text.textContent =
       "Speed Skating is a fast-paced winter racing game where players race across icy tracks using quick movements, sharp turns, and precise timing to stay ahead of their opponents. During each race, players must build speed, keep balance on slippery ice, avoid obstacles, and use the best racing line to gain an advantage. The track includes tight curves, speed zones, icy hazards, and challenging sections that test both control and reaction time. Different power-ups can be collected to gain speed boosts, improve handling, or temporarily protect the player from mistakes.";
 
@@ -135,7 +135,7 @@ function disciplinesPage(sport) {
       picturesCarusel.append(div);
     }
 
-    radarChart();
+    radarChart("Speed Skating");
     participantsList("sport_page_rankings", participantsInfo);
   }
 }
@@ -209,14 +209,4 @@ function picturesForCarusel(sport) {
       "../images/disciplines_pics/speedSkating/speedSkating5.png",
     ];
   }
-}
-
-function radarChart() {
-  let parent = document.getElementById("sport_page_skillBox");
-  let svg = d3
-    .select(parent)
-    .append("svg")
-    .attr("width", "500")
-    .attr("height", "500")
-    .style("border", "1px solid black"); // skapat svg som placeras i body och får höjd och bredd
 }
