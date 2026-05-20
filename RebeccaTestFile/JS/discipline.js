@@ -212,101 +212,98 @@ function disciplinesPage(sport) {
   title.textContent = currentSport.title;
   text.textContent = currentSport.text;
 
-<<<<<<< Updated upstream
-    title.textContent = "Snowboard Cross";
-    text.textContent =
-      "Snowboard Cross is a fast-paced winter racing game where players race down snowy mountains and icy tracks using snowboards while avoiding obstacles, collecting coins, and competing against other characters. During each race, players encounter jumps, sharp turns, moving hazards, and enemies placed throughout the course. Different power-ups can be collected along the track to gain speed boosts, temporary invincibility, or special abilities.";
+  // <<<<<<< Updated upstream
+  title.textContent = "Snowboard Cross";
+  text.textContent =
+    "Snowboard Cross is a fast-paced winter racing game where players race down snowy mountains and icy tracks using snowboards while avoiding obstacles, collecting coins, and competing against other characters. During each race, players encounter jumps, sharp turns, moving hazards, and enemies placed throughout the course. Different power-ups can be collected along the track to gain speed boosts, temporary invincibility, or special abilities.";
 
-    for (let pic of sportPicturesArray) {
-      let div = document.createElement("div");
-      div.classList.add("sport_page_carusel_pictures");
-      div.style.backgroundImage = `url("${pic}")`;
-      picturesCarusel.append(div);
-    }
-
-    radarChart("Snowboard Cross");
-    participantsList("sport_page_rankings", participantsInfo);
-=======
-  for (let pic of currentSport.pictures) {
+  for (let pic of sportPicturesArray) {
     let div = document.createElement("div");
     div.classList.add("sport_page_carusel_pictures");
     div.style.backgroundImage = `url("${pic}")`;
     picturesCarusel.append(div);
->>>>>>> Stashed changes
   }
 
-  leftArrow.addEventListener("click", () => {
-    currentSportIndex--;
+  radarChart("Snowboard Cross");
+  participantsList("sport_page_rankings", participantsInfo);
+  // =======
+  //   for (let pic of currentSport.pictures) {
+  //     let div = document.createElement("div");
+  //     div.classList.add("sport_page_carusel_pictures");
+  //     div.style.backgroundImage = `url("${pic}")`;
+  //     picturesCarusel.append(div);
+  // >>>>>>> Stashed changes
+}
 
-    if (currentSportIndex < 0) {
-      currentSportIndex = sportPageInfo.length - 1;
-    }
+leftArrow.addEventListener("click", () => {
+  currentSportIndex--;
 
-<<<<<<< Updated upstream
-    radarChart("Bob Sleigh");
-    participantsList("sport_page_rankings", participantsInfo);
+  if (currentSportIndex < 0) {
+    currentSportIndex = sportPageInfo.length - 1;
   }
+
+  radarChart("Bob Sleigh");
+  participantsList("sport_page_rankings", participantsInfo);
+}
   if (sport == "figureSkating") {
-    //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
-    let sportPicturesArray = picturesForCarusel("figureSkating");
-    backgroundPic.style.backgroundImage =
-      "url('../images/disciplines_pics/figureSkating/figureSkatingPic.png')";
-=======
-    disciplinesPage(sportPageInfo[currentSportIndex].title);
-  });
->>>>>>> Stashed changes
+  //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
+  let sportPicturesArray = picturesForCarusel("figureSkating");
+  backgroundPic.style.backgroundImage =
+    "url('../images/disciplines_pics/figureSkating/figureSkatingPic.png')";
+  disciplinesPage(sportPageInfo[currentSportIndex].title);
+};
 
-  rightArrow.addEventListener("click", () => {
-    currentSportIndex++;
+rightArrow.addEventListener("click", () => {
+  currentSportIndex++;
 
-    if (currentSportIndex >= sportPageInfo.length) {
-      currentSportIndex = 0;
-    }
+  if (currentSportIndex >= sportPageInfo.length) {
+    currentSportIndex = 0;
+  }
 
 <<<<<<< Updated upstream
-    radarChart("Figure Skating");
-    participantsList("sport_page_rankings", participantsInfo);
-  }
+  radarChart("Figure Skating");
+  participantsList("sport_page_rankings", participantsInfo);
+}
   if (sport == "skiJumping") {
-    //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
-    let sportPicturesArray = picturesForCarusel("skiJumping");
-    backgroundPic.style.backgroundImage =
-      "url('../images/disciplines_pics/skiJumping/skiJumpingPic1.png')";
+  //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
+  let sportPicturesArray = picturesForCarusel("skiJumping");
+  backgroundPic.style.backgroundImage =
+    "url('../images/disciplines_pics/skiJumping/skiJumpingPic1.png')";
 
-    title.textContent = "Ski Jumping";
-    text.textContent =
-      "Ski Jumping is a thrilling winter challenge where players speed down a snowy ramp before launching high into the air and trying to land as far as possible. During each jump, players must build up speed, time their takeoff, keep balance in the air, and control the landing to earn points. The course includes icy ramps, wind changes, timing challenges, and obstacles that affect the jump. Different power-ups can be collected to increase speed, improve stability, or give the player extra lift during the flight.";
+  title.textContent = "Ski Jumping";
+  text.textContent =
+    "Ski Jumping is a thrilling winter challenge where players speed down a snowy ramp before launching high into the air and trying to land as far as possible. During each jump, players must build up speed, time their takeoff, keep balance in the air, and control the landing to earn points. The course includes icy ramps, wind changes, timing challenges, and obstacles that affect the jump. Different power-ups can be collected to increase speed, improve stability, or give the player extra lift during the flight.";
 
-    for (let pic of sportPicturesArray) {
-      let div = document.createElement("div");
-      div.classList.add("sport_page_carusel_pictures");
-      div.style.backgroundImage = `url("${pic}")`;
-      picturesCarusel.append(div);
-    }
-
-    radarChart("Ski Jumping");
-    participantsList("sport_page_rankings", participantsInfo);
+  for (let pic of sportPicturesArray) {
+    let div = document.createElement("div");
+    div.classList.add("sport_page_carusel_pictures");
+    div.style.backgroundImage = `url("${pic}")`;
+    picturesCarusel.append(div);
   }
-  if (sport == "speedSkating") {
-    //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
-    let sportPicturesArray = picturesForCarusel("speedSkating");
-    backgroundPic.style.backgroundImage =
-      "url('../images/disciplines_pics/speedSkating/speedSkatingPic.png')";
 
-    title.textContent = "Speed Skating";
-    text.textContent =
-      "Speed Skating is a fast-paced winter racing game where players race across icy tracks using quick movements, sharp turns, and precise timing to stay ahead of their opponents. During each race, players must build speed, keep balance on slippery ice, avoid obstacles, and use the best racing line to gain an advantage. The track includes tight curves, speed zones, icy hazards, and challenging sections that test both control and reaction time. Different power-ups can be collected to gain speed boosts, improve handling, or temporarily protect the player from mistakes.";
+  radarChart("Ski Jumping");
+  participantsList("sport_page_rankings", participantsInfo);
+}
+if (sport == "speedSkating") {
+  //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
+  let sportPicturesArray = picturesForCarusel("speedSkating");
+  backgroundPic.style.backgroundImage =
+    "url('../images/disciplines_pics/speedSkating/speedSkatingPic.png')";
 
-    for (let pic of sportPicturesArray) {
-      let div = document.createElement("div");
-      div.classList.add("sport_page_carusel_pictures");
-      div.style.backgroundImage = `url("${pic}")`;
-      picturesCarusel.append(div);
-    }
+  title.textContent = "Speed Skating";
+  text.textContent =
+    "Speed Skating is a fast-paced winter racing game where players race across icy tracks using quick movements, sharp turns, and precise timing to stay ahead of their opponents. During each race, players must build speed, keep balance on slippery ice, avoid obstacles, and use the best racing line to gain an advantage. The track includes tight curves, speed zones, icy hazards, and challenging sections that test both control and reaction time. Different power-ups can be collected to gain speed boosts, improve handling, or temporarily protect the player from mistakes.";
 
-    radarChart("Speed Skating");
-    participantsList("sport_page_rankings", participantsInfo);
+  for (let pic of sportPicturesArray) {
+    let div = document.createElement("div");
+    div.classList.add("sport_page_carusel_pictures");
+    div.style.backgroundImage = `url("${pic}")`;
+    picturesCarusel.append(div);
   }
+
+  radarChart("Speed Skating");
+  participantsList("sport_page_rankings", participantsInfo);
+}
 =======
     disciplinesPage(sportPageInfo[currentSportIndex].title);
   });
