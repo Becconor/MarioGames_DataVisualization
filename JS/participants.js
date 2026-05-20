@@ -107,9 +107,51 @@ function participantsPage() {
       </div>
   `;
 
-  let participants = document.getElementById("participants_page_participants");
-  participantsList("participants_page_participants", participantsInfo);
+  participantsList("participants_page_participants", getSeasonParticipantRanking());
   scatterPlot();
+}
+
+function getSeasonParticipantRanking() {
+  let pointsByParticipant = {};
+
+  for (let dayIndex = 0; dayIndex < selectedSeason.competitionDays.length; dayIndex++) {
+    let day = selectedSeason.competitionDays[dayIndex];
+
+    for (let eventIndex = 0; eventIndex < day.events.length; eventIndex++) {
+      let event = day.events[eventIndex];
+
+      for (let scoreIndex = 0; scoreIndex < event.scores.length; scoreIndex++) {
+        let playerScore = event.scores[scoreIndex];
+
+        if (!pointsByParticipant[playerScore.participantId]) {
+          pointsByParticipant[playerScore.participantId] = 0;
+        }
+
+        pointsByParticipant[playerScore.participantId] += playerScore.score;
+      }
+    }
+  }
+
+  let ranking = [];
+
+  for (let i = 0; i < participantsInfo.length; i++) {
+    let participant = participantsInfo[i];
+
+    ranking.push({
+      ...participant,
+      totalScore: pointsByParticipant[participant.id] || 0,
+    });
+  }
+
+  ranking.sort((a, b) => {
+    if (b.totalScore !== a.totalScore) {
+      return b.totalScore - a.totalScore;
+    }
+
+    return a.name.localeCompare(b.name);
+  });
+
+  return ranking;
 }
 
 function participantsList(id, listOfParticipants) {
@@ -119,7 +161,7 @@ function participantsList(id, listOfParticipants) {
     <div id="top_players">
         <div id="first_player">
             <div id="first_player_bubble">
-                <div id="first_player_pic"></div>
+            <div id="first_player_pic"></div>
             </div>
             <div id="rankingBubble1">1st</div>
         </div>

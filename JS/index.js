@@ -50,6 +50,10 @@ function header(page) {
       if (page === "disciplines") {
         disciplinesPage(currentSportTitle);
       }
+
+      if (page === "participant") {
+        participantsPage();
+      }
     });
   }
 
