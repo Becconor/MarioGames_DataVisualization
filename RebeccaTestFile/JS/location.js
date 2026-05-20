@@ -391,8 +391,3 @@ function locationsPage(location) {
 
     // }
 };
-
-
-function worldInfoPick() {
-
-}

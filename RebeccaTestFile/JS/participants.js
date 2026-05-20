@@ -1,15 +1,15 @@
 function participantsPage() {
-    header("participant");
-    mainDOM.innerHTML = `
+  header("participant");
+  mainDOM.innerHTML = `
   <div id="participants_page_backgroundimage">
-        <div id="participants_page_title">Participants Ranking</div>
+        <h1 id="participants_page_title">Participants Ranking</h1>
       </div>
       <div id="participants_page_participants"></div>
       <div id="participants_page_box">
         <div id="participants_page_informationbox">
-          <p id="participants_page_information_title">
+          <h2 id="participants_page_information_title">
             Player Performance by Sport
-          </p>
+          </h2>
           <p id="participants_page_information_text">
             Select a sport to see how each player performs within it. The chart
             compares the number of times a player has participated with their
@@ -103,7 +103,7 @@ function participantsPage() {
       </div>
   `;
 
-    let participants = document.getElementById("participants_page_participants");
-    participantsList("participants_page_participants", addToParticipants);
-    scatterPlot();
+  let participants = document.getElementById("participants_page_participants");
+  participantsList("participants_page_participants", addToParticipants);
+  scatterPlot();
 }

@@ -373,7 +373,6 @@ function participantsPage() {
     let participants = document.getElementById("participants_page_participants");
     participantsList("participants_page_participants", addToParticipants);
     scatterPlot();
->>>>>>> sportSite2.0
 }
 
 // function locationsPage() {

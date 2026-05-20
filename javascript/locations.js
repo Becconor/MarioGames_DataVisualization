@@ -1,38 +1,38 @@
 let currentSectionIndex = 0;
 
-const locationInfo = [
-    {
-        img: "../images/worlds_pics/skyWorldPic.png",
-        title: "Sky World",
-        text: "Game days in Sky World take place far above the clouds, where participants must face a light but demanding environment. The soft terrain affects movement and stability, while the windy weather adds an extra layer of difficulty to every event.Success in Sky World often depends not only on strength and speed, but also on balance, focus, and the ability to quickly adapt to changing conditions.Despite its bright and peaceful appearance, this location can be one of the most challenging settings in the competition."
-    }, {
-        img: "../images/worlds_pics/desertWorldPic.png",
-        title: "Desert World",
-        text: "Game days in Sky World take place far above the clouds, where participants must face a light but demanding environment. The soft terrain affects movement and stability, while the windy weather adds an extra layer of difficulty to every event.Success in Sky World often depends not only on strength and speed, but also on balance, focus, and the ability to quickly adapt to changing conditions.Despite its bright and peaceful appearance, this location can be one of the most challenging settings in the competition."
-    }, {
-        img: "../images/worlds_pics/mountainWorldPic.png",
-        title: "Mountain World",
-        text: "Game days in Sky World take place far above the clouds, where participants must face a light but demanding environment. The soft terrain affects movement and stability, while the windy weather adds an extra layer of difficulty to every event.Success in Sky World often depends not only on strength and speed, but also on balance, focus, and the ability to quickly adapt to changing conditions.Despite its bright and peaceful appearance, this location can be one of the most challenging settings in the competition."
-    }, {
-        img: "../images/worlds_pics/underWaterWorldPic.png",
-        title: "Underwater World",
-        text: "Game days in Sky World take place far above the clouds, where participants must face a light but demanding environment. The soft terrain affects movement and stability, while the windy weather adds an extra layer of difficulty to every event.Success in Sky World often depends not only on strength and speed, but also on balance, focus, and the ability to quickly adapt to changing conditions.Despite its bright and peaceful appearance, this location can be one of the most challenging settings in the competition."
-    }, {
-        img: "../images/worlds_pics/plainWorldPic.png",
-        title: "Plain World",
-        text: "Game days in Sky World take place far above the clouds, where participants must face a light but demanding environment. The soft terrain affects movement and stability, while the windy weather adds an extra layer of difficulty to every event.Success in Sky World often depends not only on strength and speed, but also on balance, focus, and the ability to quickly adapt to changing conditions.Despite its bright and peaceful appearance, this location can be one of the most challenging settings in the competition."
-    }
-];
+// const locationInfo = [
+//     {
+//         img: "../images/worlds_pics/skyWorldPic.png",
+//         title: "Sky World",
+//         text: "Game days in Sky World take place far above the clouds, where participants must face a light but demanding environment. The soft terrain affects movement and stability, while the windy weather adds an extra layer of difficulty to every event.Success in Sky World often depends not only on strength and speed, but also on balance, focus, and the ability to quickly adapt to changing conditions.Despite its bright and peaceful appearance, this location can be one of the most challenging settings in the competition."
+//     }, {
+//         img: "../images/worlds_pics/desertWorldPic.png",
+//         title: "Desert World",
+//         text: "Game days in Sky World take place far above the clouds, where participants must face a light but demanding environment. The soft terrain affects movement and stability, while the windy weather adds an extra layer of difficulty to every event.Success in Sky World often depends not only on strength and speed, but also on balance, focus, and the ability to quickly adapt to changing conditions.Despite its bright and peaceful appearance, this location can be one of the most challenging settings in the competition."
+//     }, {
+//         img: "../images/worlds_pics/mountainWorldPic.png",
+//         title: "Mountain World",
+//         text: "Game days in Sky World take place far above the clouds, where participants must face a light but demanding environment. The soft terrain affects movement and stability, while the windy weather adds an extra layer of difficulty to every event.Success in Sky World often depends not only on strength and speed, but also on balance, focus, and the ability to quickly adapt to changing conditions.Despite its bright and peaceful appearance, this location can be one of the most challenging settings in the competition."
+//     }, {
+//         img: "../images/worlds_pics/underWaterWorldPic.png",
+//         title: "Underwater World",
+//         text: "Game days in Sky World take place far above the clouds, where participants must face a light but demanding environment. The soft terrain affects movement and stability, while the windy weather adds an extra layer of difficulty to every event.Success in Sky World often depends not only on strength and speed, but also on balance, focus, and the ability to quickly adapt to changing conditions.Despite its bright and peaceful appearance, this location can be one of the most challenging settings in the competition."
+//     }, {
+//         img: "../images/worlds_pics/plainWorldPic.png",
+//         title: "Plain World",
+//         text: "Game days in Sky World take place far above the clouds, where participants must face a light but demanding environment. The soft terrain affects movement and stability, while the windy weather adds an extra layer of difficulty to every event.Success in Sky World often depends not only on strength and speed, but also on balance, focus, and the ability to quickly adapt to changing conditions.Despite its bright and peaceful appearance, this location can be one of the most challenging settings in the competition."
+//     }
+// ];
 
-let locationSections = [
-    {
-        title: "Game Days",
-        text: "The list shows how all players performed here, making it easy to identify the top performers and compare results within the selected location."
-    }, {
-        title: "Best Players",
-        text: "Explore the player ranking for this location. The list shows how all players performed here, making it easy to identify the top performers and compare results within the selected location."
-    }
-];
+// let locationSections = [
+//     {
+//         title: "Game Days",
+//         text: "The list shows how all players performed here, making it easy to identify the top performers and compare results within the selected location."
+//     }, {
+//         title: "Best Players",
+//         text: "Explore the player ranking for this location. The list shows how all players performed here, making it easy to identify the top performers and compare results within the selected location."
+//     }
+// ];
 
 
 
