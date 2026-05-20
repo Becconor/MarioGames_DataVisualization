@@ -2,7 +2,7 @@ let headerDOM = document.querySelector("header");
 let mainDOM = document.querySelector("main");
 
 function header(page) {
-    headerDOM.innerHTML = `
+  headerDOM.innerHTML = `
         <div id="navbar">
             <button class="navButton" id="homePage">Home</button>
             <button class="navButton" id="disciplinesPage">Disciplines</button>
@@ -25,97 +25,97 @@ function header(page) {
         </div>
     `;
 
-    let homePageId = document.getElementById("homePage");
-    let disciplinesPageId = document.getElementById("disciplinesPage");
-    let participantsPageId = document.getElementById("participantsPage");
-    let locationsPageId = document.getElementById("locationsPage");
-    let chooseSeasonId = document.getElementById("chooseSeason");
-    let seasonDropdownID = document.getElementById("seasonDropdown");
+  let homePageId = document.getElementById("homePage");
+  let disciplinesPageId = document.getElementById("disciplinesPage");
+  let participantsPageId = document.getElementById("participantsPage");
+  let locationsPageId = document.getElementById("locationsPage");
+  let chooseSeasonId = document.getElementById("chooseSeason");
+  let seasonDropdownID = document.getElementById("seasonDropdown");
 
-    if (page === "home") {
-        headerDOM.style.background =
-            "repeating-linear-gradient(-45deg, #92C6FA 0px, #92C6FA 18px, #9ECEFB 18px, #9ECEFB 36px) ";
-        chooseSeasonId.style.backgroundColor = "#92C6FA";
-        seasonDropdownID.style.backgroundColor = "#92C6FA";
+  if (page === "home") {
+    headerDOM.style.background =
+      "repeating-linear-gradient(-45deg, #92C6FA 0px, #92C6FA 18px, #9ECEFB 18px, #9ECEFB 36px) ";
+    chooseSeasonId.style.backgroundColor = "#92C6FA";
+    seasonDropdownID.style.backgroundColor = "#92C6FA";
+  }
+
+  if (page === "disciplines") {
+    headerDOM.style.background =
+      "repeating-linear-gradient(-45deg, #92C6FA 0px, #92C6FA 18px, #9ECEFB 18px, #9ECEFB 36px) ";
+    chooseSeasonId.style.backgroundColor = "#92C6FA";
+    seasonDropdownID.style.backgroundColor = "#92C6FA";
+  }
+
+  if (page === "participant") {
+    headerDOM.style.background =
+      "repeating-linear-gradient(-45deg, #f7a7c8 0px, #f7a7c8 18px, #f5b7d1 18px, #f5b7d1 36px) ";
+    chooseSeasonId.style.backgroundColor = "#f7a7c8";
+    seasonDropdownID.style.backgroundColor = "#f7a7c8";
+  }
+
+  if (page === "locations") {
+    headerDOM.style.background =
+      "repeating-linear-gradient(-45deg, #F8D97D 0px, #F8D97D 18px, #F7D25C 18px, #F7D25C 36px) ";
+    chooseSeasonId.style.backgroundColor = "#F7D25C";
+    seasonDropdownID.style.backgroundColor = "#F7D25C";
+  }
+
+  homePageId.addEventListener("click", () => {
+    disciplinesPageId.style.textDecoration = "none";
+    participantsPageId.style.textDecoration = "none";
+    locationsPageId.style.textDecoration = "none";
+
+    homePageId.style.textDecoration = "underline";
+
+    homePage();
+  });
+
+  disciplinesPageId.addEventListener("click", () => {
+    homePageId.style.textDecoration = "none";
+    participantsPageId.style.textDecoration = "none";
+    locationsPageId.style.textDecoration = "none";
+
+    disciplinesPageId.style.textDecoration = "underline";
+
+    disciplinesPage("snowboard");
+  });
+
+  participantsPageId.addEventListener("click", () => {
+    homePageId.style.textDecoration = "none";
+    disciplinesPageId.style.textDecoration = "none";
+    locationsPageId.style.textDecoration = "none";
+
+    participantsPageId.style.textDecoration = "underline";
+
+    participantsPage();
+  });
+
+  locationsPageId.addEventListener("click", () => {
+    homePageId.style.textDecoration = "none";
+    disciplinesPageId.style.textDecoration = "none";
+    participantsPageId.style.textDecoration = "none";
+
+    locationsPageId.style.textDecoration = "underline";
+
+    locationsPage("Desert World");
+  });
+
+  chooseSeasonId.addEventListener("click", () => {
+    if (seasonDropdownID.style.display === "block") {
+      seasonDropdownID.style.display = "none";
+    } else {
+      seasonDropdownID.style.display = "block";
     }
-
-    if (page === "disciplines") {
-        headerDOM.style.background =
-            "repeating-linear-gradient(-45deg, #92C6FA 0px, #92C6FA 18px, #9ECEFB 18px, #9ECEFB 36px) ";
-        chooseSeasonId.style.backgroundColor = "#92C6FA";
-        seasonDropdownID.style.backgroundColor = "#92C6FA";
-    }
-
-    if (page === "participant") {
-        headerDOM.style.background =
-            "repeating-linear-gradient(-45deg, #f7a7c8 0px, #f7a7c8 18px, #f5b7d1 18px, #f5b7d1 36px) ";
-        chooseSeasonId.style.backgroundColor = "#f7a7c8";
-        seasonDropdownID.style.backgroundColor = "#f7a7c8";
-    }
-
-    if (page === "locations") {
-        headerDOM.style.background =
-            "repeating-linear-gradient(-45deg, #F8D97D 0px, #F8D97D 18px, #F7D25C 18px, #F7D25C 36px) ";
-        chooseSeasonId.style.backgroundColor = "#F7D25C";
-        seasonDropdownID.style.backgroundColor = "#F7D25C";
-    }
-
-    homePageId.addEventListener("click", () => {
-        disciplinesPageId.style.textDecoration = "none";
-        participantsPageId.style.textDecoration = "none";
-        locationsPageId.style.textDecoration = "none";
-
-        homePageId.style.textDecoration = "underline";
-
-        homePage();
-    });
-
-    disciplinesPageId.addEventListener("click", () => {
-        homePageId.style.textDecoration = "none";
-        participantsPageId.style.textDecoration = "none";
-        locationsPageId.style.textDecoration = "none";
-
-        disciplinesPageId.style.textDecoration = "underline";
-
-        disciplinesPage("snowboard");
-    });
-
-    participantsPageId.addEventListener("click", () => {
-        homePageId.style.textDecoration = "none";
-        disciplinesPageId.style.textDecoration = "none";
-        locationsPageId.style.textDecoration = "none";
-
-        participantsPageId.style.textDecoration = "underline";
-
-        participantsPage();
-    });
-
-    locationsPageId.addEventListener("click", () => {
-        homePageId.style.textDecoration = "none";
-        disciplinesPageId.style.textDecoration = "none";
-        participantsPageId.style.textDecoration = "none";
-
-        locationsPageId.style.textDecoration = "underline";
-
-        locationsPage("Desert World");
-    });
-
-    chooseSeasonId.addEventListener("click", () => {
-        if (seasonDropdownID.style.display === "block") {
-            seasonDropdownID.style.display = "none";
-        } else {
-            seasonDropdownID.style.display = "block";
-        }
-    });
+  });
 }
 
 function homePage() {
-    header("home");
+  header("home");
 }
 
 function disciplinesPage(sport) {
-    header("disciplines");
-    mainDOM.innerHTML = `
+  header("disciplines");
+  mainDOM.innerHTML = `
     <div id="sport_page_box">
         <div id="sport_page_backgroundPicture">
           <div id="sport_page_whiteBackground">
@@ -148,51 +148,51 @@ function disciplinesPage(sport) {
       </div>
     `;
 
-    let backgroundPic = document.getElementById("sport_page_backgroundPicture");
-    let title = document.getElementById("sport_page_title");
-    let text = document.getElementById("sport_page_text");
-    let picturesCarusel = document.getElementById("sport_page_carusel_track");
-    let choosensport = document.getElementById("sport_page_choosen_sport");
+  let backgroundPic = document.getElementById("sport_page_backgroundPicture");
+  let title = document.getElementById("sport_page_title");
+  let text = document.getElementById("sport_page_text");
+  let picturesCarusel = document.getElementById("sport_page_carusel_track");
+  let choosensport = document.getElementById("sport_page_choosen_sport");
 
-    if (sport == "snowboard") {
-        //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
-        let sportPicturesArray = picturesForCarusel("snowboard");
-        backgroundPic.style.backgroundImage =
-            "url('../images/disciplines_pics/snowboardCross/snowboardPic1.png')";
+  if (sport == "snowboard") {
+    //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
+    let sportPicturesArray = picturesForCarusel("snowboard");
+    backgroundPic.style.backgroundImage =
+      "url('../images/disciplines_pics/snowboardCross/snowboardPic1.png')";
 
     choosensport.textContent = "Snowborad Cross";
     title.textContent = "Snowboard Cross";
     text.textContent =
       "Snowboard Cross is a fast-paced winter racing game where players race down snowy mountains and icy tracks using snowboards while avoiding obstacles, collecting coins, and competing against other characters. During each race, players encounter jumps, sharp turns, moving hazards, and enemies placed throughout the course. Different power-ups can be collected along the track to gain speed boosts, temporary invincibility, or special abilities.";
 
-        for (let pic of sportPicturesArray) {
-            let div = document.createElement("div");
-            div.classList.add("sport_page_carusel_pictures");
-            div.style.backgroundImage = `url("${pic}")`;
-            picturesCarusel.append(div);
-        }
+    for (let pic of sportPicturesArray) {
+      let div = document.createElement("div");
+      div.classList.add("sport_page_carusel_pictures");
+      div.style.backgroundImage = `url("${pic}")`;
+      picturesCarusel.append(div);
+    }
 
     radarChart("snowboard cross");
     participantsList("sport_page_rankings", addToParticipants);
   }
 
-    if (sport == "bobSleigh") {
-        //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
-        let sportPicturesArray = picturesForCarusel("bobSleigh");
-        backgroundPic.style.backgroundImage =
-            "url('../images/disciplines_pics/bobSleigh/bobSleighPic.png')";
+  if (sport == "bobSleigh") {
+    //här behövs funktion för att få fram players array med ranking på vem som presterat bäst inom den valda sporten
+    let sportPicturesArray = picturesForCarusel("bobSleigh");
+    backgroundPic.style.backgroundImage =
+      "url('../images/disciplines_pics/bobSleigh/bobSleighPic.png')";
 
     choosensport.textContent = "Bob Sleigh";
     title.textContent = "Bob Sleigh";
     text.textContent =
       "Bob Sleigh is a high-speed winter racing game where players race down icy tracks in teams, guiding their sled through sharp curves, steep drops, and snowy tunnels. During each race, players must keep control of their speed while avoiding obstacles, collecting coins, and competing against other characters. The course includes tight turns, slippery sections, jumps, and hazards that challenge both timing and teamwork. Different power-ups can be collected along the track to gain speed boosts, improve control, or activate special abilities.";
 
-        for (let pic of sportPicturesArray) {
-            let div = document.createElement("div");
-            div.classList.add("sport_page_carusel_pictures");
-            div.style.backgroundImage = `url("${pic}")`;
-            picturesCarusel.append(div);
-        }
+    for (let pic of sportPicturesArray) {
+      let div = document.createElement("div");
+      div.classList.add("sport_page_carusel_pictures");
+      div.style.backgroundImage = `url("${pic}")`;
+      picturesCarusel.append(div);
+    }
 
     radarChart("bobsleigh");
     participantsList("sport_page_rankings", addToParticipants);
@@ -208,12 +208,12 @@ function disciplinesPage(sport) {
     text.textContent =
       "Figure Skating is a skill-based winter performance game where players glide across the ice while completing spins, jumps, turns, and choreographed movements. During each round, players must keep their balance, follow the rhythm, avoid mistakes, and perform combinations with precision to earn points. The course includes timing challenges, slippery ice sections, and special moments where players can collect coins or power-ups to improve their score. Different power-ups can be used to boost performance, recover from mistakes, or add extra style to the routine.";
 
-        for (let pic of sportPicturesArray) {
-            let div = document.createElement("div");
-            div.classList.add("sport_page_carusel_pictures");
-            div.style.backgroundImage = `url("${pic}")`;
-            picturesCarusel.append(div);
-        }
+    for (let pic of sportPicturesArray) {
+      let div = document.createElement("div");
+      div.classList.add("sport_page_carusel_pictures");
+      div.style.backgroundImage = `url("${pic}")`;
+      picturesCarusel.append(div);
+    }
 
     radarChart("figureSkating");
     participantsList("sport_page_rankings", addToParticipants);
@@ -229,12 +229,12 @@ function disciplinesPage(sport) {
     text.textContent =
       "Ski Jumping is a thrilling winter challenge where players speed down a snowy ramp before launching high into the air and trying to land as far as possible. During each jump, players must build up speed, time their takeoff, keep balance in the air, and control the landing to earn points. The course includes icy ramps, wind changes, timing challenges, and obstacles that affect the jump. Different power-ups can be collected to increase speed, improve stability, or give the player extra lift during the flight.";
 
-        for (let pic of sportPicturesArray) {
-            let div = document.createElement("div");
-            div.classList.add("sport_page_carusel_pictures");
-            div.style.backgroundImage = `url("${pic}")`;
-            picturesCarusel.append(div);
-        }
+    for (let pic of sportPicturesArray) {
+      let div = document.createElement("div");
+      div.classList.add("sport_page_carusel_pictures");
+      div.style.backgroundImage = `url("${pic}")`;
+      picturesCarusel.append(div);
+    }
 
     radarChart("skiJumping");
     participantsList("sport_page_rankings", addToParticipants);
@@ -250,12 +250,12 @@ function disciplinesPage(sport) {
     text.textContent =
       "Speed Skating is a fast-paced winter racing game where players race across icy tracks using quick movements, sharp turns, and precise timing to stay ahead of their opponents. During each race, players must build speed, keep balance on slippery ice, avoid obstacles, and use the best racing line to gain an advantage. The track includes tight curves, speed zones, icy hazards, and challenging sections that test both control and reaction time. Different power-ups can be collected to gain speed boosts, improve handling, or temporarily protect the player from mistakes.";
 
-        for (let pic of sportPicturesArray) {
-            let div = document.createElement("div");
-            div.classList.add("sport_page_carusel_pictures");
-            div.style.backgroundImage = `url("${pic}")`;
-            picturesCarusel.append(div);
-        }
+    for (let pic of sportPicturesArray) {
+      let div = document.createElement("div");
+      div.classList.add("sport_page_carusel_pictures");
+      div.style.backgroundImage = `url("${pic}")`;
+      picturesCarusel.append(div);
+    }
 
     radarChart("speedSkating");
     participantsList("sport_page_rankings", addToParticipants);
@@ -263,8 +263,8 @@ function disciplinesPage(sport) {
 }
 
 function participantsPage() {
-    header("participant");
-    mainDOM.innerHTML = `
+  header("participant");
+  mainDOM.innerHTML = `
   <div id="participants_page_backgroundimage">
         <div class="back_track">
           <p>Home/</p>
@@ -371,19 +371,19 @@ function participantsPage() {
       </div>
   `;
 
-    let participants = document.getElementById("participants_page_participants");
-    participantsList("participants_page_participants", addToParticipants);
-    scatterPlot();
+  let participants = document.getElementById("participants_page_participants");
+  participantsList("participants_page_participants", addToParticipants);
+  scatterPlot();
 }
 
 function locationsPage() {
-    header("locations");
+  header("locations");
 }
 
 function participantsList(id, listOfParticipants) {
-    let parent = document.getElementById(id);
-    let list = listOfParticipants;
-    parent.innerHTML = `
+  let parent = document.getElementById(id);
+  let list = listOfParticipants;
+  parent.innerHTML = `
     <div id="top_players">
         <div id="first_player">
             <div id="first_player_bubble">
@@ -408,44 +408,44 @@ function participantsList(id, listOfParticipants) {
     <button id="participants_list_button">See all</button>
   `;
 
-    let firstPlayer = document.getElementById("first_player_pic");
-    let secondPlayer = document.getElementById("second_player_pic");
-    let thirdPlayer = document.getElementById("third_player_pic");
-    let button = document.getElementById("participants_list_button");
-    let playersBox = document.getElementById("players");
-    let popup = document.createElement("div");
-    let playersAreVisible = false;
-    let playerPopup = false;
+  let firstPlayer = document.getElementById("first_player_pic");
+  let secondPlayer = document.getElementById("second_player_pic");
+  let thirdPlayer = document.getElementById("third_player_pic");
+  let button = document.getElementById("participants_list_button");
+  let playersBox = document.getElementById("players");
+  let popup = document.createElement("div");
+  let playersAreVisible = false;
+  let playerPopup = false;
 
-    firstPlayer.style.backgroundImage = `url("${list[0].img}")`;
-    secondPlayer.style.backgroundImage = `url("${list[1].img}")`;
-    thirdPlayer.style.backgroundImage = `url("${list[2].img}")`;
+  firstPlayer.style.backgroundImage = `url("${list[0].img}")`;
+  secondPlayer.style.backgroundImage = `url("${list[1].img}")`;
+  thirdPlayer.style.backgroundImage = `url("${list[2].img}")`;
 
-    button.addEventListener("click", () => {
-        if (playersAreVisible == false) {
-            button.textContent = "See less";
-            button.style.marginTop = "100px";
+  button.addEventListener("click", () => {
+    if (playersAreVisible == false) {
+      button.textContent = "See less";
+      button.style.marginTop = "100px";
 
-            for (let i = 3; i < list.length; i++) {
-                let playerCard = document.createElement("div");
-                playerCard.classList.add("player_card");
+      for (let i = 3; i < list.length; i++) {
+        let playerCard = document.createElement("div");
+        playerCard.classList.add("player_card");
 
-                playerCard.innerHTML = `
+        playerCard.innerHTML = `
           <div class="players_circle">
             <div class="players_pic"></div>
           </div>
           <div class="players_ranking">${i + 1}th</div>
         `;
 
-                let playerPic = playerCard.querySelector(".players_pic");
-                playerPic.style.backgroundImage = `url("${list[i].img}")`;
+        let playerPic = playerCard.querySelector(".players_pic");
+        playerPic.style.backgroundImage = `url("${list[i].img}")`;
 
-                playersBox.append(playerCard);
+        playersBox.append(playerCard);
 
-                playerCard.addEventListener("click", () => {
-                    if (playerPopup == false) {
-                        popup.classList.add("choosen_player_page");
-                        popup.innerHTML = `
+        playerCard.addEventListener("click", () => {
+          if (playerPopup == false) {
+            popup.classList.add("choosen_player_page");
+            popup.innerHTML = `
               <div class="choosen_player_leftside">
                 <img
                   class="choosen_player_pic"
@@ -467,66 +467,66 @@ function participantsList(id, listOfParticipants) {
                 <div class="choosen_player_svg"></div>
               </div>
             `;
-                        let playerName = popup.querySelector(".choosen_player_info_text");
-                        let playerPic = popup.querySelector(".choosen_player_pic");
-                        let nameBox = popup.querySelector(".choosen_player_namebox");
-                        let infoBox = popup.querySelector(".choosen_player_info");
-                        let leftArrow = popup.querySelector(".choosen_player_left_arrow");
-                        let rightArrow = popup.querySelector(".choosen_player_right_arrow");
-                        let currentPlayer = i;
-                        nameBox.style.backgroundColor = list[i].color;
-                        infoBox.style.backgroundColor = list[i].color;
-                        document.body.append(popup);
-                        playerPopup = true;
-                        leftArrow.addEventListener("click", () => {
-                            currentPlayer--;
+            let playerName = popup.querySelector(".choosen_player_info_text");
+            let playerPic = popup.querySelector(".choosen_player_pic");
+            let nameBox = popup.querySelector(".choosen_player_namebox");
+            let infoBox = popup.querySelector(".choosen_player_info");
+            let leftArrow = popup.querySelector(".choosen_player_left_arrow");
+            let rightArrow = popup.querySelector(".choosen_player_right_arrow");
+            let currentPlayer = i;
+            nameBox.style.backgroundColor = list[i].color;
+            infoBox.style.backgroundColor = list[i].color;
+            document.body.append(popup);
+            playerPopup = true;
+            leftArrow.addEventListener("click", () => {
+              currentPlayer--;
 
-                            if (currentPlayer < 0) {
-                                currentPlayer = list.length - 1;
-                            }
-                            nameBox.style.backgroundColor = list[currentPlayer].color;
-                            infoBox.style.backgroundColor = list[currentPlayer].color;
-                            playerName.textContent = list[currentPlayer].name;
-                            playerPic.src = list[currentPlayer].img;
-                        });
-                        rightArrow.addEventListener("click", () => {
-                            currentPlayer++;
+              if (currentPlayer < 0) {
+                currentPlayer = list.length - 1;
+              }
+              nameBox.style.backgroundColor = list[currentPlayer].color;
+              infoBox.style.backgroundColor = list[currentPlayer].color;
+              playerName.textContent = list[currentPlayer].name;
+              playerPic.src = list[currentPlayer].img;
+            });
+            rightArrow.addEventListener("click", () => {
+              currentPlayer++;
 
-                            if (currentPlayer > list.length - 1) {
-                                currentPlayer = list.length - 1 - (list.length - 1);
-                            }
-                            nameBox.style.backgroundColor = list[currentPlayer].color;
-                            infoBox.style.backgroundColor = list[currentPlayer].color;
-                            playerName.textContent = list[currentPlayer].name;
-                            playerPic.src = list[currentPlayer].img;
-                        });
-                    } else if (playerPopup == true) {
-                        popup.remove();
-                        playerPopup = false;
-                    }
-                });
-            }
-            playersAreVisible = true;
-        } else if (playersAreVisible) {
-            button.textContent = "See all";
-            button.style.marginTop = "";
-            playersBox.innerHTML = ``;
-            playersAreVisible = false;
-        }
-    });
-
-    playersBox.addEventListener("click", (event) => {
-        let clickedPlayerCard = event.target.closest(".player_card");
-
-        if (clickedPlayerCard) {
-            return;
-        }
-
-        if (playerPopup == true) {
+              if (currentPlayer > list.length - 1) {
+                currentPlayer = list.length - 1 - (list.length - 1);
+              }
+              nameBox.style.backgroundColor = list[currentPlayer].color;
+              infoBox.style.backgroundColor = list[currentPlayer].color;
+              playerName.textContent = list[currentPlayer].name;
+              playerPic.src = list[currentPlayer].img;
+            });
+          } else if (playerPopup == true) {
             popup.remove();
             playerPopup = false;
-        }
-    });
+          }
+        });
+      }
+      playersAreVisible = true;
+    } else if (playersAreVisible) {
+      button.textContent = "See all";
+      button.style.marginTop = "";
+      playersBox.innerHTML = ``;
+      playersAreVisible = false;
+    }
+  });
+
+  playersBox.addEventListener("click", (event) => {
+    let clickedPlayerCard = event.target.closest(".player_card");
+
+    if (clickedPlayerCard) {
+      return;
+    }
+
+    if (playerPopup == true) {
+      popup.remove();
+      playerPopup = false;
+    }
+  });
 }
 
 function picturesForCarusel(sport) {
@@ -650,13 +650,13 @@ function radarChart(sport) {
 }
 
 function scatterPlot() {
-    let parent = document.getElementById("participants_page_svg");
-    let svg = d3
-        .select(parent)
-        .append("svg")
-        .attr("width", "500")
-        .attr("height", "500")
-        .style("border", "1px solid black"); // skapat svg som placeras i body och får höjd och bredd
+  let parent = document.getElementById("participants_page_svg");
+  let svg = d3
+    .select(parent)
+    .append("svg")
+    .attr("width", "500")
+    .attr("height", "500")
+    .style("border", "1px solid black"); // skapat svg som placeras i body och får höjd och bredd
 }
 
 disciplinesPage("bobSleigh");
