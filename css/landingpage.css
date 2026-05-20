@@ -1,6 +1,86 @@
+#titlePage {
+    width: 100%;
+    height: 850px;
+
+    background-image: url("../images/titlePageBG-Enhanced.png");
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* HERO BILD */
+
+#heroCharacters {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+
+    height: 600px;
+
+    z-index: 2;
+
+}
+
+/* TITEL */
+
+#titleText {
+    position: absolute;
+
+    top: 120px;
+    left: 380px;
+
+    z-index: 3;
+    text-shadow: 4px 4px 0 red;
+}
+
+#titleText h1 {
+    margin: 0;
+
+    font-size: 5rem;
+    line-height: 0.95;
+
+    color: white;
+    font-weight: 900;
+}
+
+/* FLYTTA NEDERSTA RADEN */
+
+#titleBottom {
+    margin-left: 140px !important;
+}
+
+/* INFO TEXT */
+
+#titleInfo {
+    position: absolute;
+
+    top: 420px;
+    right: 180px;
+
+    z-index: 3;
+
+    color: white;
+}
+
+#titleInfo h2 {
+    margin: 0 0 10px 0;
+    font-size: 2rem;
+}
+
+#titleInfo p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+#greenLine {
+    width: 1000px;
+}
+
 #greenBox {
     width: 100%;
-    height: 900px;
+    height: 700px;
     background-color: #1BA000;
 
     margin-top: 300px;
@@ -102,6 +182,16 @@
     justify-content: space-between;
     margin-top: -100px;
     overflow: hidden;
+    align-items: center;
+
+}
+
+#leftSideT,
+#rightSideT {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 20;
 }
 
 .tunnelImg {
@@ -110,12 +200,32 @@
 }
 
 #tunnelLeft {
-    transform: rotate(90deg)
+    transform: rotate(90deg);
 }
 
 #tunnelRight {
-    transform: rotate(270deg) scale(-1, 1)
+    transform: rotate(270deg) scale(-1, 1);
 }
+
+.arrowDiv {
+    width: 75px;
+    height: 75px;
+    background-color: #E50B0B;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 45px;
+}
+
+#arrowDivL {
+    border-radius: 0 50% 50% 0;
+}
+
+#arrowDivR {
+    border-radius: 50% 0 0 50%;
+}
+
 
 .seeMoreBut {
     width: 232px;
@@ -126,11 +236,13 @@
     color: #fff;
     font-family: "catamaran";
     font-size: 16px;
+    display: block;
+    margin: 20px auto 100px;
 }
 
 #redBox {
     width: 100%;
-    height: 900px;
+    height: 1500px;
     background-color: #F00;
     display: flex;
     align-items: flex-start;
@@ -176,4 +288,30 @@
     height: 100%;
     border-radius: 5px;
     object-fit: cover;
+}
+
+#playerCarousel {
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    width: 100%;
+    height: 361px;
+    position: relative;
+}
+
+#playersContainer {
+    display: flex;
+    gap: 10px;
+    width: 600px;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.playerImg {
+    height: 175px;
+}
+
+#locations {
+    margin-left: 150px;
 }

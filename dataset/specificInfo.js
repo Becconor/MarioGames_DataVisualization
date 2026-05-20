@@ -73,7 +73,7 @@ const addToParticipants = [
     img: "../images/players/babyLuigi.png",
   },
   {
-    name: "Baby Luma",
+    name: "Baby Luma", //FINNS EJ BILD PÅ
     img: "../images/players/babyLuma.webp",
   },
   {

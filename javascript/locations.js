@@ -154,4 +154,4 @@ function worldInfoPick() {
 
 }
 
-locationsPage("Sky World");
+/* locationsPage("Sky World"); */
