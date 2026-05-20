@@ -156,7 +156,7 @@ header {
 
 /* Disciplines */
 #disciplines {
-    background-color: #eeeded;
+    background-image: url("../images/backgrounds/backgroundLandingPage.png");
     padding: 5vh 0 0 0;
 }
 

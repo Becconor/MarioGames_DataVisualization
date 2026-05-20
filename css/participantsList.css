@@ -2,6 +2,7 @@
   position: relative;
   height: 400px;
   width: 600px;
+  margin: 0 auto;
 }
 
 #first_player {
@@ -181,8 +182,9 @@
   width: 80%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 48px;
-  margin-top: 70px;
+  margin: 70px auto 0 auto;
   position: relative; /*  ta bort?? */
 }
 
