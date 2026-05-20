@@ -6,12 +6,17 @@ function radarChart(sport) {
   let parent = document.getElementById("sport_page_skillBox");
   let selectedSport = choosenSport(sport);
   let skills = Object.entries(selectedSport.skillFactors);
-  console.log(skills);
+
+  let sortedValues = skills.map((d) => d[1]).sort((a, b) => a - b);
+  console.log(sortedValues);
+  function getRankValue(value) {
+    return sortedValues.indexOf(value) + 1;
+  }
 
   let width = 600;
   let height = 600;
   const margin = 60;
-  const maxValue = 25; //ändra till största talet i skills
+  const maxValue = sortedValues[4]; //ändra till största talet i skills
   const levels = 5;
   const radius = Math.min(width, height) / 2 - margin;
   //räkna ut vinkel för mellan varje skills
@@ -81,7 +86,7 @@ function radarChart(sport) {
   //skapa radarformen
   const radarLine = d3
     .lineRadial()
-    .radius((d) => radiusScale(skillScale(d[1]))) //d.value behövs ändra
+    .radius((d) => radiusScale(getRankValue(d[1])))
     .angle((d, i) => i * angleSlice)
     .curve(d3.curveLinearClosed);
 
@@ -98,10 +103,10 @@ function radarChart(sport) {
   skills.forEach((d, i) => {
     const angle = angleSlice * i - Math.PI / 2;
 
-    const scaledValue = skillScale(d[1]);
+    const rankValue = getRankValue(d[1]);
 
-    const x = Math.cos(angle) * radiusScale(scaledValue);
-    const y = Math.sin(angle) * radiusScale(scaledValue);
+    const x = Math.cos(angle) * radiusScale(rankValue);
+    const y = Math.sin(angle) * radiusScale(rankValue);
 
     middle
       .append("circle")
@@ -111,7 +116,7 @@ function radarChart(sport) {
       .attr("fill", "#b92990");
   });
 
-  for (let level = 0; level <= maxValue; level++) {
+  for (let level = 0; level <= levels; level++) {
     middle
       .append("text")
       .attr("x", radiusScale(level))

@@ -231,26 +231,31 @@ function participantsList(id, listOfParticipants) {
                 />
                 <div class="choosen_player_namebox">
                     <img class="choosen_player_left_arrow" class="choosen_player_arrow" src="images/arrows/arrowLeft.png" alt="" />
-                    <p class="choosen_player_info_text">${list[i].name}</p>
+                    <p class="choosen_player_info_name">${list[i].name}</p>
                     <img class="choosen_player_right_arrow" class="choosen_player_arrow" src="images/arrows/arrowRight.png" alt="" />
                 </div>
               </div>
               <div class="choosen_player_rightside">
                 <div class="choosen_player_info">
-                  <img src="images/arrows/arrowLeft.png" alt="" />
-                  <p class="choosen_player_info_text">skills</p>
-                  <img src="images/arrows/arrowRight.png" alt="" />
+                  <img class="leftArrow2" src="images/arrows/arrowLeft.png" alt="" />
+                  <p class="choosen_player_info_text">Skills</p>
+                  <img class="rightArrow2" src="images/arrows/arrowRight.png" alt="" />
                 </div>
                 <div class="choosen_player_svg"></div>
               </div>
             `;
-            let playerName = popup.querySelector(".choosen_player_info_text");
+            let playerName = popup.querySelector(".choosen_player_info_name");
             let playerPic = popup.querySelector(".choosen_player_pic");
             let nameBox = popup.querySelector(".choosen_player_namebox");
             let infoBox = popup.querySelector(".choosen_player_info");
             let leftArrow = popup.querySelector(".choosen_player_left_arrow");
             let rightArrow = popup.querySelector(".choosen_player_right_arrow");
+            let leftArrow2 = popup.querySelector(".leftArrow2");
+            let rightArrow2 = popup.querySelector(".rightArrow2");
+            let choice = popup.querySelector(".choosen_player_info_text");
             let currentPlayer = i;
+            let choices = ["Skills", "Best Sport", "Ranking Per Season"];
+            let currentChoice = 0;
             nameBox.style.backgroundColor = list[i].color;
             infoBox.style.backgroundColor = list[i].color;
             document.body.append(popup);
@@ -272,7 +277,7 @@ function participantsList(id, listOfParticipants) {
               currentPlayer++;
 
               if (currentPlayer > list.length - 1) {
-                currentPlayer = list.length - 1 - (list.length - 1);
+                currentPlayer = 0;
               }
               nameBox.style.backgroundColor = list[currentPlayer].color;
               infoBox.style.backgroundColor = list[currentPlayer].color;
@@ -280,7 +285,47 @@ function participantsList(id, listOfParticipants) {
               playerPic.src = list[currentPlayer].img;
             });
 
+            rightArrow2.addEventListener("click", () => {
+              currentChoice++;
+              if (currentChoice > choices.length - 1) {
+                currentChoice = 0;
+              }
+              choice.textContent = choices[currentChoice];
 
+              if (choice.textContent == "Skills") {
+                console.log("barChart");
+                barChart();
+              }
+              if (choice.textContent == "Ranking Per season") {
+                console.log("linechart");
+                lineChart();
+              }
+              if (choice.textContent == "Best Sport") {
+                console.log("linechart");
+                sportRanking();
+              }
+            });
+
+            leftArrow2.addEventListener("click", () => {
+              currentChoice--;
+              if (currentChoice < 0) {
+                currentChoice = choices.length - 1;
+              }
+              choice.textContent = choices[currentChoice];
+
+              if (choice.textContent == "Skills") {
+                console.log("barChart");
+                barChart();
+              }
+              if (choice.textContent == "Ranking Per Season") {
+                console.log("linechart");
+                lineChart();
+              }
+              if (choice.textContent == "Best Sport") {
+                console.log("linechart");
+                sportRanking();
+              }
+            });
           } else if (playerPopup == true) {
             popup.remove();
             playerPopup = false;
