@@ -2,7 +2,7 @@
   position: relative;
   height: 400px;
   width: 600px;
-  margin: 0 auto;
+  padding: 75px;
 }
 
 #first_player {
@@ -185,7 +185,8 @@
   justify-content: center;
   gap: 48px;
   margin: 70px auto 0 auto;
-  position: relative; /*  ta bort?? */
+  position: relative;
+  /*  ta bort?? */
 }
 
 .player_card {
@@ -325,4 +326,14 @@
 
 .choosen_player_arrow {
   height: 60%;
+}
+
+.choosen_player_right_arrow {
+  width: 30px;
+  height: 30px;
+}
+
+.choosen_player_left_arrow {
+  width: 30px;
+  height: 30px;
 }

@@ -103,14 +103,21 @@ function participantsPage() {
       </div>
   `;
 
-  participantsList("participants_page_participants", getSeasonParticipantRanking());
+  participantsList(
+    "participants_page_participants",
+    getSeasonParticipantRanking(),
+  );
   scatterPlot();
 }
 
 function getSeasonParticipantRanking() {
   let pointsByParticipant = {};
 
-  for (let dayIndex = 0; dayIndex < selectedSeason.competitionDays.length; dayIndex++) {
+  for (
+    let dayIndex = 0;
+    dayIndex < selectedSeason.competitionDays.length;
+    dayIndex++
+  ) {
     let day = selectedSeason.competitionDays[dayIndex];
 
     for (let eventIndex = 0; eventIndex < day.events.length; eventIndex++) {
@@ -223,16 +230,16 @@ function participantsList(id, listOfParticipants) {
                   alt=""
                 />
                 <div class="choosen_player_namebox">
-                    <img class="choosen_player_left_arrow" class="choosen_player_arrow" src="../images/arrows/arrowLeft.png" alt="" />
+                    <img class="choosen_player_left_arrow" class="choosen_player_arrow" src="images/arrows/arrowLeft.png" alt="" />
                     <p class="choosen_player_info_text">${list[i].name}</p>
-                    <img class="choosen_player_right_arrow" class="choosen_player_arrow" src="../images/arrows/arrowRight.png" alt="" />
+                    <img class="choosen_player_right_arrow" class="choosen_player_arrow" src="images/arrows/arrowRight.png" alt="" />
                 </div>
               </div>
               <div class="choosen_player_rightside">
                 <div class="choosen_player_info">
-                  <img src="../images/arrows/arrowLeft.png" alt="" />
+                  <img src="images/arrows/arrowLeft.png" alt="" />
                   <p class="choosen_player_info_text">skills</p>
-                  <img src="../images/arrows/arrowRight.png" alt="" />
+                  <img src="images/arrows/arrowRight.png" alt="" />
                 </div>
                 <div class="choosen_player_svg"></div>
               </div>
@@ -248,6 +255,7 @@ function participantsList(id, listOfParticipants) {
             infoBox.style.backgroundColor = list[i].color;
             document.body.append(popup);
             playerPopup = true;
+
             leftArrow.addEventListener("click", () => {
               currentPlayer--;
 
@@ -259,6 +267,7 @@ function participantsList(id, listOfParticipants) {
               playerName.textContent = list[currentPlayer].name;
               playerPic.src = list[currentPlayer].img;
             });
+
             rightArrow.addEventListener("click", () => {
               currentPlayer++;
 
@@ -270,6 +279,8 @@ function participantsList(id, listOfParticipants) {
               playerName.textContent = list[currentPlayer].name;
               playerPic.src = list[currentPlayer].img;
             });
+
+
           } else if (playerPopup == true) {
             popup.remove();
             playerPopup = false;
