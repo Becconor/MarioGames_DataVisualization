@@ -230,13 +230,9 @@ function participantsList(id, listOfParticipants) {
                   alt=""
                 />
                 <div class="choosen_player_namebox">
-<<<<<<< Updated upstream
-                    <p class="choosen_player_info_text">${list[i].name}</p>
-=======
                     <img class="choosen_player_left_arrow" class="choosen_player_arrow" src="images/arrows/arrowLeft.png" alt="" />
                     <p class="choosen_player_info_text">${list[i].name}</p>
                     <img class="choosen_player_right_arrow" class="choosen_player_arrow" src="images/arrows/arrowRight.png" alt="" />
->>>>>>> Stashed changes
                 </div>
               </div>
               <div class="choosen_player_rightside">
