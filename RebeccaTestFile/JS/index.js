@@ -46,6 +46,10 @@ function header(page) {
       if (page === "locations") {
         locationsPage(currentLocationName);
       }
+
+      if (page === "disciplines") {
+        disciplinesPage(currentSportTitle);
+      }
     });
   }
 
@@ -104,7 +108,7 @@ function header(page) {
     participantsPageId.style.textDecoration = "none";
     locationsPageId.style.textDecoration = "none";
 
-    disciplinesPage("snowboard");
+    disciplinesPage("Snowboard Cross");
   });
 
   participantsPageId.addEventListener("click", () => {

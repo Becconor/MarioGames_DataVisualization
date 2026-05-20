@@ -40,14 +40,24 @@
     width: 100%;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
+}
+
+#L_worldTitleRow {
+    width: 520px;
+    max-width: 90%;
+
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+    column-gap: 18px;
+    margin-bottom: 18px;
 }
 
 #L_worldName {
     text-align: center;
-    margin-top: 0;
+    margin: 0;
 }
 
 #L_worlsDescription {
