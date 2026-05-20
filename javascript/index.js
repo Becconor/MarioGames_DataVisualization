@@ -190,7 +190,7 @@ function disciplinesPage(sport) {
       picturesCarusel.append(div);
     }
 
-    radarChart("bobSleigh");
+    radarChart("bobsleigh");
     participantsList("sport_page_rankings", addToParticipants);
   }
   if (sport == "figureSkating") {
@@ -540,18 +540,17 @@ function picturesForCarusel(sport) {
       "../images/disciplines_pics/snowboardCross/snowboardCross5.png",
     ];
   } else if (sport == "bobSleigh") {
-    // lägg in rätt bilder
     return [
       "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
       "../images/disciplines_pics/bobSleigh/bobSleigh2.png",
-      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
-      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
-      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
+      "../images/disciplines_pics/bobSleigh/bobSleighPic3.png",
+      "../images/disciplines_pics/bobSleigh/bobSleighPic4.png",
+      "../images/disciplines_pics/bobSleigh/bobSleighPicture5.png",
       "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
       "../images/disciplines_pics/bobSleigh/bobSleigh2.png",
-      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
-      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
-      "../images/disciplines_pics/bobSleigh/bobSleigh1.png",
+      "../images/disciplines_pics/bobSleigh/bobSleighPic3.png",
+      "../images/disciplines_pics/bobSleigh/bobSleighPic4.png",
+      "../images/disciplines_pics/bobSleigh/bobSleighPicture5.png",
     ];
   } else if (sport == "figureSkating") {
     return [
@@ -572,7 +571,7 @@ function picturesForCarusel(sport) {
       "../images/disciplines_pics/skiJumping/snowboardCross1.png",
       "../images/disciplines_pics/skiJumping/snowboardCross2.png",
       "../images/disciplines_pics/skiJumping/snowboardCross3.png",
-      "../images/disciplines_pics/skiJumping/snowboardCross1.png",
+      "../images/disciplines_pics/skiJumping/snowboardCross4.png",
       "../images/disciplines_pics/skiJumping/snowboardCross1.png",
       "../images/disciplines_pics/skiJumping/snowboardCross1.png",
       "../images/disciplines_pics/skiJumping/snowboardCross2.png",
@@ -613,9 +612,15 @@ function radarChart(sport) {
   const margin = 60;
   const maxValue = 5;
   const minValue = 0;
+  const levels = 5;
   const radius = Math.min(width, height) / 2 - margin;
+  //räkna ut vinkel för mellan varje skills
   const angleSlice = (Math.PI * 2) / skills.length;
-  const radiusScale = d3.
+
+  const radiusScale = d3
+    .scaleLinear()
+    .domain([minValue, maxValue])
+    .range([0, radius]);
 
   let svg = d3
     .select(parent)
@@ -624,7 +629,20 @@ function radarChart(sport) {
     .attr("height", height)
     .style("border", "1px solid black");
 
+  //Skapa en grupp som ska placeras mitten, annars ligger det uppe i ett hörn
   svg.append("g").attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+  //skapa ringarna som är i cirkeln
+  for (let level = 1; level <= levels; level++) {
+    svg
+      .append("circle")
+      .attr("r", radiusScale(level))
+      .attr("fill", "none")
+      .attr("stroke", "grey")
+      .attr("stroke-width", 1);
+  }
+
+  //få fram axlarna
 }
 
 function scatterPlot() {
@@ -637,5 +655,4 @@ function scatterPlot() {
     .style("border", "1px solid black"); // skapat svg som placeras i body och får höjd och bredd
 }
 
-disciplinesPage("snowboard");
-/* participantsPage(); */
+disciplinesPage("bobSleigh");
