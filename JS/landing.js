@@ -1,7 +1,13 @@
 let currentIndex = 0;
+const visiblePlayers = 4;
+const playerStep = 115;
 
 function renderTunnelPlayers() {
     const container = document.getElementById('playersContainer');
+    if (!container) {
+        return;
+    }
+
     container.innerHTML = '';
 
     participantsInfo.forEach(player => {
@@ -15,37 +21,54 @@ function renderTunnelPlayers() {
 
 function updateCarousel() {
     const container = document.getElementById('playersContainer');
-    const offset = -(currentIndex * 120); // hur mycket som flyttas
+    if (!container) {
+        return;
+    }
+
+    const offset = -(currentIndex * playerStep); // hur mycket som flyttas
     container.style.transform = `translateX(${offset}px)`;
 }
 
-document.getElementById('arrowDivL').addEventListener('click', () => {
-    currentIndex = Math.max(0, currentIndex - 5);
+function startLandingPageCarousel() {
+    const leftArrow = document.getElementById('arrowDivL');
+    const rightArrow = document.getElementById('arrowDivR');
+    const seeMoreBtn = document.querySelector(".seeMoreBut");
 
-    if (currentIndex === 0) {
-        currentIndex = maxIndex;
-    } else {
-        currentIndex -= 5;
+    if (!leftArrow || !rightArrow) {
+        return;
     }
 
+    currentIndex = 0;
+    renderTunnelPlayers();
     updateCarousel();
-});
 
-document.getElementById('arrowDivR').addEventListener('click', () => {
-    const maxIndex = Math.ceil(participantsInfo.length / 5) - 1;
-    if (currentIndex >= maxIndex) {
-        currentIndex = 0;
-    } else {
-        currentIndex += 5;
+    leftArrow.addEventListener('click', () => {
+        const maxIndex = Math.max(0, participantsInfo.length - visiblePlayers);
+
+        if (currentIndex === 0) {
+            currentIndex = maxIndex;
+        } else {
+            currentIndex = Math.max(0, currentIndex - visiblePlayers);
+        }
+
+        updateCarousel();
+    });
+
+    rightArrow.addEventListener('click', () => {
+        const maxIndex = Math.max(0, participantsInfo.length - visiblePlayers);
+
+        if (currentIndex >= maxIndex) {
+            currentIndex = 0;
+        } else {
+            currentIndex = Math.min(maxIndex, currentIndex + visiblePlayers);
+        }
+
+        updateCarousel();
+    });
+
+    if (seeMoreBtn) {
+        seeMoreBtn.addEventListener("click", () => {
+            participantsPage();
+        });
     }
-
-    updateCarousel();
-});
-
-renderTunnelPlayers();
-
-let seeMoreBtn = document.querySelector(".seeMoreBut");
-seeMoreBtn.addEventListener("click", () => {
-
-    participantsPage();
-});
+}
