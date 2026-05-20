@@ -83,7 +83,7 @@ function radarChart(sport) {
   //skapa radarformen
   const radarLine = d3
     .lineRadial()
-    .radius((d) => radiusScale(d.value))
+    .radius((d) => radiusScale(d.value)) //d.value behövs ändra
     .angle((d, i) => i * angleSlice)
     .curve(d3.curveLinearClosed);
 
@@ -97,11 +97,11 @@ function radarChart(sport) {
     .attr("stroke-width", 3);
 
   //lägg till punkter
-  data.forEach((d, i) => {
+  skills.forEach((d, i) => {
     const angle = angleSlice * i - Math.PI / 2;
 
-    const x = Math.cos(angle) * radiusScale(d.value);
-    const y = Math.sin(angle) * radiusScale(d.value);
+    const x = Math.cos(angle) * radiusScale(d.value); //d.value behövs ändras
+    const y = Math.sin(angle) * radiusScale(d.value); //d.value behövs ändras
 
     middle
       .append("circle")
@@ -132,3 +132,9 @@ function scatterPlot() {
     .attr("height", "500")
     .style("border", "1px solid black"); // skapat svg som placeras i body och får höjd och bredd
 }
+
+function barChart() {}
+
+function lineChart() {}
+
+function sportRanking() {}
