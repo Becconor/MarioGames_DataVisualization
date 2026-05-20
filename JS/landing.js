@@ -4,7 +4,7 @@ function renderTunnelPlayers() {
     const container = document.getElementById('playersContainer');
     container.innerHTML = '';
 
-    completeParticipantsSet.forEach(player => {
+    participantsInfo.forEach(player => {
         const img = document.createElement('img');
         img.className = 'playerImg';
         img.src = player.img;
@@ -32,7 +32,7 @@ document.getElementById('arrowDivL').addEventListener('click', () => {
 });
 
 document.getElementById('arrowDivR').addEventListener('click', () => {
-    const maxIndex = Math.ceil(completeParticipantsSet.length / 5) - 1;
+    const maxIndex = Math.ceil(participantsInfo.length / 5) - 1;
     if (currentIndex >= maxIndex) {
         currentIndex = 0;
     } else {
