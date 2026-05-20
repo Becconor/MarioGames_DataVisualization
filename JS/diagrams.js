@@ -8,8 +8,8 @@ function radarChart(sport) {
   let skills = Object.entries(selectedSport.skillFactors);
   console.log(skills);
 
-  let width = 500;
-  let height = 500;
+  let width = 600;
+  let height = 600;
   const margin = 60;
   const maxValue = 25; //ändra till största talet i skills
   const levels = 5;
@@ -25,8 +25,7 @@ function radarChart(sport) {
     .select(parent)
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .style("border", "1px solid black");
+    .attr("height", height);
 
   //Skapa en grupp som ska placeras mitten, annars ligger det uppe i ett hörn
   let middle = svg
