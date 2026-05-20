@@ -63,8 +63,8 @@ function radarChart(sport) {
     const angle = angleSlice * i - Math.PI / 2;
 
     // radius + 15 så att det inte ligger exakt på yttersta linjen
-    const x = Math.cos(angle) * (radius + 15);
-    const y = Math.sin(angle) * (radius + 15);
+    const x = Math.cos(angle) * (radius + 30);
+    const y = Math.sin(angle) * (radius + 30);
 
     middle
       .append("text")
@@ -107,8 +107,8 @@ function radarChart(sport) {
       .append("circle")
       .attr("cx", x)
       .attr("cy", y)
-      .attr("r", 4)
-      .attr("fill", "#2980b9");
+      .attr("r", 8)
+      .attr("fill", "#b92990");
   });
 
   for (let level = 0; level <= maxValue; level++) {
