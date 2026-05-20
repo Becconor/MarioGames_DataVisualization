@@ -136,7 +136,7 @@ function homePage() {
         <h1 id="titleTop">SUPER WINTER</h1>
         <h1 id="titleBottom">OLYMPICS LEAGUE</h1>
       </div>
-      <img id="heroCharacters" src="../images/mario-sonic.png" alt="">
+      <img id="heroCharacters" src="images/mario-sonic.png" alt="">
       <div id="titleInfo">
         <h2>10 seasons has passed of SWOL!</h2>
         <p>Here you can find everything you need to know.</p>
@@ -144,7 +144,7 @@ function homePage() {
 
 
     </div>
-    <img src="../images/curvedLineWhite.png" alt="">
+    <img src="images/curvedLineWhite.png" alt="">
     <div id="disciplines">
 
       <div id="disciplinesIntro">
@@ -156,11 +156,11 @@ function homePage() {
       <div id="disciplinesAllBoxes">
         <div class="disciplinesBoxes" id="BobSleigh">
           <div>
-            <img src="../images/disciplines_pics/bobSleigh/bobSleighPic.png" alt="">
+            <img src="images/disciplines_pics/bobSleigh/bobSleighPic.png" alt="">
 
             <div class="disciplinesBoxesText">
               <h2>Bob </br>Sleigh</h2>
-              <img src="../images/skills_pics/boomerangFlower.png" alt="">
+              <img src="images/skills_pics/boomerangFlower.png" alt="">
             </div>
           </div>
 
@@ -169,11 +169,11 @@ function homePage() {
 
         <div class="disciplinesBoxes" id="FigureSkating">
           <div>
-            <img src="../images/disciplines_pics/figureSkating/figureSkatingPic.png" alt="">
+            <img src="images/disciplines_pics/figureSkating/figureSkatingPic.png" alt="">
 
             <div class="disciplinesBoxesText">
               <h2>Figure </br>Skating</h2>
-              <img src="../images/skills_pics/fireFlower.png" alt="">
+              <img src="images/skills_pics/fireFlower.png" alt="">
             </div>
           </div>
 
@@ -182,11 +182,11 @@ function homePage() {
 
         <div class="disciplinesBoxes" id="SkiJumping">
           <div>
-            <img src="../images/disciplines_pics/skiJumping/skiJumpingPic1.png" alt="">
+            <img src="images/disciplines_pics/skiJumping/skiJumpingPic1.png" alt="">
 
             <div class="disciplinesBoxesText">
               <h2>Ski </br>Jumping</h2>
-              <img src="../images/skills_pics/iceFlower.webp" alt="">
+              <img src="images/skills_pics/iceFlower.webp" alt="">
             </div>
           </div>
 
@@ -195,11 +195,11 @@ function homePage() {
 
         <div class="disciplinesBoxes" id="SnowboardCross">
           <div>
-            <img src="../images/disciplines_pics/snowboardCross/snowboardPic1.png" alt="">
+            <img src="images/disciplines_pics/snowboardCross/snowboardPic1.png" alt="">
 
             <div class="disciplinesBoxesText">
               <h2>Snowboard </br>Cross</h2>
-              <img src="../images/skills_pics/mushroom.png" alt="">
+              <img src="images/skills_pics/mushroom.png" alt="">
             </div>
           </div>
 
@@ -208,11 +208,11 @@ function homePage() {
 
         <div class="disciplinesBoxes" id="SpeedSkating">
           <div>
-            <img src="../images/disciplines_pics/speedSkating/speedSkatingPic.png" alt="">
+            <img src="images/disciplines_pics/speedSkating/speedSkatingPic.png" alt="">
 
             <div class="disciplinesBoxesText">
               <h2>Speed </br>Skating</h2>
-              <img src="../images/skills_pics/superLeaf.webp" alt="">
+              <img src="images/skills_pics/superLeaf.webp" alt="">
             </div>
           </div>
 
@@ -222,7 +222,7 @@ function homePage() {
     </div>
 
     <div id="participants">
-      <div id="greenLine"><img src="../images/curvedLine.png" alt=""></div>
+      <div id="greenLine"><img src="images/curvedLine.png" alt=""></div>
       <div id="greenBox">
         <div id="participantsIntro">
           <h2 id="participantHeading">Participants</h2>
@@ -235,21 +235,21 @@ function homePage() {
 
         <div id="podium">
           <div id="secondPlace">
-            <img id="podiumBowser" src="../images/players/bowser.webp" alt="">
+            <img id="podiumBowser" src="images/players/bowser.webp" alt="">
             <!--Ska såklart vara andra spelare sen från array, beroende på vem som vinner (eller kanske inte behövs då landingpage mest ska förklara olika delar)-->
             <div class="podiumBox" id="secondPodium">
               <p>2</p>
             </div>
           </div>
           <div id="firstPlace">
-            <img id="podiumMario" src="../images/players/mario.webp" alt="">
+            <img id="podiumMario" src="images/players/mario.webp" alt="">
             <div class="podiumBox" id="firstPodium">
               <p>1</p>
             </div>
           </div>
 
           <div id="thirdPlace">
-            <img id="podiumDaisy" src="../images/players/daisy.png" alt="">
+            <img id="podiumDaisy" src="images/players/daisy.png" alt="">
             <div class="podiumBox" id="thirdPodium">
               <p>3</p>
             </div>
@@ -258,9 +258,9 @@ function homePage() {
       </div>
       <div id="playerTunnel">
         <div id="leftSideT">
-          <img class="tunnelImg" id="tunnelLeft" src="../images/pipeValid.png" alt="">
+          <img class="tunnelImg" id="tunnelLeft" src="images/pipeValid.png" alt="">
           <div class="arrowDiv" id="arrowDivL">
-            <img src="../images/arrows/arrowLeft.png" alt="">
+            <img src="images/arrows/arrowLeft.png" alt="">
           </div>
         </div>
         <div id="playerCarousel">
@@ -269,9 +269,9 @@ function homePage() {
         </div>
         <div id="rightSideT">
           <div class="arrowDiv" id="arrowDivR">
-            <img src="../images/arrows/arrowRight.png" alt="">
+            <img src="images/arrows/arrowRight.png" alt="">
           </div>
-          <img class="tunnelImg" id="tunnelRight" src="../images/pipeValid.png" alt="">
+          <img class="tunnelImg" id="tunnelRight" src="images/pipeValid.png" alt="">
         </div>
       </div>
       <button class="seeMoreBut">See More</button>
@@ -288,31 +288,31 @@ function homePage() {
       <div id="locationsAllBoxes">
         <div class="locationBox">
           <div class="locationPicDiv">
-            <img src="../images/worlds_pics/skyWorldPic.png" alt="">
+            <img src="images/worlds_pics/skyWorldPic.png" alt="">
           </div>
           <h3>Sky world</h3>
         </div>
         <div class="locationBox">
           <div class="locationPicDiv">
-            <img src="../images/worlds_pics/desertWorldPic.png" alt="">
+            <img src="images/worlds_pics/desertWorldPic.png" alt="">
           </div>
           <h3>Desert world</h3>
         </div>
         <div class="locationBox">
           <div class="locationPicDiv">
-            <img src="../images/worlds_pics/mountainWorldPic.png" alt="">
+            <img src="images/worlds_pics/mountainWorldPic.png" alt="">
           </div>
           <h3>Mountain world</h3>
         </div>
         <div class="locationBox">
           <div class="locationPicDiv">
-            <img src="../images/worlds_pics/underwaterWorldPic.png" alt="">
+            <img src="images/worlds_pics/underwaterWorldPic.png" alt="">
           </div>
           <h3>Underwater world</h3>
         </div>
         <div class="locationBox">
           <div class="locationPicDiv">
-            <img src="../images/worlds_pics/plainWorldPic.png" alt="">
+            <img src="images/worlds_pics/plainWorldPic.png" alt="">
           </div>
 
           <h3>Plain world</h3>
