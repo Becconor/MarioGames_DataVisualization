@@ -6,11 +6,12 @@ function radarChart(sport) {
   let parent = document.getElementById("sport_page_skillBox");
   let selectedSport = choosenSport(sport);
   let skills = Object.entries(selectedSport.skillFactors);
+  console.log(skills);
 
   let width = 500;
   let height = 500;
   const margin = 60;
-  const maxValue = 5; //ändra till största talet i skills
+  const maxValue = 25; //ändra till största talet i skills
   const minValue = 0;
   const levels = 5;
   const radius = Math.min(width, height) / 2 - margin;
@@ -77,13 +78,13 @@ function radarChart(sport) {
       .style("font-weight", "bold")
       .style("font-size", "15px")
       .style("fill", "black")
-      .text("hej");
+      .text(d[0]);
   });
 
   //skapa radarformen
   const radarLine = d3
     .lineRadial()
-    .radius((d) => radiusScale(d.value)) //d.value behövs ändra
+    .radius((d) => radiusScale(d[1])) //d.value behövs ändra
     .angle((d, i) => i * angleSlice)
     .curve(d3.curveLinearClosed);
 
@@ -100,8 +101,8 @@ function radarChart(sport) {
   skills.forEach((d, i) => {
     const angle = angleSlice * i - Math.PI / 2;
 
-    const x = Math.cos(angle) * radiusScale(d.value); //d.value behövs ändras
-    const y = Math.sin(angle) * radiusScale(d.value); //d.value behövs ändras
+    const x = Math.cos(angle) * radiusScale(d[1]); //d.value behövs ändras
+    const y = Math.sin(angle) * radiusScale(d[1]); //d.value behövs ändras
 
     middle
       .append("circle")
