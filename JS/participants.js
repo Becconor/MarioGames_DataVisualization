@@ -103,14 +103,21 @@ function participantsPage() {
       </div>
   `;
 
-  participantsList("participants_page_participants", getSeasonParticipantRanking());
+  participantsList(
+    "participants_page_participants",
+    getSeasonParticipantRanking(),
+  );
   scatterPlot();
 }
 
 function getSeasonParticipantRanking() {
   let pointsByParticipant = {};
 
-  for (let dayIndex = 0; dayIndex < selectedSeason.competitionDays.length; dayIndex++) {
+  for (
+    let dayIndex = 0;
+    dayIndex < selectedSeason.competitionDays.length;
+    dayIndex++
+  ) {
     let day = selectedSeason.competitionDays[dayIndex];
 
     for (let eventIndex = 0; eventIndex < day.events.length; eventIndex++) {
@@ -230,9 +237,9 @@ function participantsList(id, listOfParticipants) {
               </div>
               <div class="choosen_player_rightside">
                 <div class="choosen_player_info">
-                  <img src="../images/arrows/arrowLeft.png" alt="" />
+                  <img src="images/arrows/arrowLeft.png" alt="" />
                   <p class="choosen_player_info_text">skills</p>
-                  <img src="../images/arrows/arrowRight.png" alt="" />
+                  <img src="images/arrows/arrowRight.png" alt="" />
                 </div>
                 <div class="choosen_player_svg"></div>
               </div>
